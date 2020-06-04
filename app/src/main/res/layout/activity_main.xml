@@ -1,64 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
-
-
-    <Button
-        android:tag="practice"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="?attr/button_drawable"
-        android:textColor="@drawable/selectors_text_color"
-        android:text="@string/practice"
-        android:onClick="onButton"
-        android:textSize="20sp"/>
-    <Button
-        android:tag="settings"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="?attr/button_drawable"
-        android:textColor="@drawable/selectors_text_color"
-        android:text="@string/settings"
-        android:onClick="onButton"
-        android:textSize="20sp"/>
-    <Button
-        android:tag="stats"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="?attr/button_drawable"
-        android:textColor="@drawable/selectors_text_color"
-        android:text="@string/stats"
-        android:onClick="onButton"
-        android:textSize="20sp"/>
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/practice"
+        style="@style/Button.Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
-        <Button
-            android:tag="share"
-            android:layout_margin="10dp"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="?attr/button_drawable"
-            android:textColor="@drawable/selectors_text_color"
-            android:text="@string/share"
-            android:onClick="onButton"/>
-        <Button
-            android:tag="rate"
-            android:layout_margin="10dp"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:background="?attr/button_drawable"
-            android:textColor="@drawable/selectors_text_color"
-            android:text="@string/rate"
-            android:onClick="onButton"/>
-    </LinearLayout>
+        android:background="?attr/buttonDrawable"
+        android:text="@string/practice"
+        android:textColor="@drawable/selectors_text_color" />
 
-</LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stats"
+        style="@style/Button.Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/buttonDrawable"
+        android:text="@string/stats"
+        android:textColor="@drawable/selectors_text_color" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/settings"
+        style="@style/Button.Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/buttonDrawable"
+        android:text="@string/settings"
+        android:textColor="@drawable/selectors_text_color" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,5 @@
+**DerDieDas 1.1.0**
+* Added: new App Icon
+* Added: Dark Theme comatible with System Theme
+* Updated: cleaner UI
+* and some other tweaks

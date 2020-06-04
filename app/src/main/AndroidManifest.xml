@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.spitslide.derdiedas">
+    package="com.machiav3lli.derdiedas">
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/germany_flag_128"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/germany_flag_128"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.spitslide.derdiedas.ui.MainActivity">
+        android:theme="@style/AppTheme.DayNight">
+        <activity android:name="com.machiav3lli.derdiedas.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.spitslide.derdiedas.ui.WordActivity"/>
-        <activity android:name="com.spitslide.derdiedas.ui.SettingsActivity"/>
-        <activity android:name="com.spitslide.derdiedas.ui.StatsActivity"/>
+        <activity android:name="com.machiav3lli.derdiedas.ui.WordActivity" />
+        <activity android:name="com.machiav3lli.derdiedas.ui.SettingsActivity" />
+        <activity android:name="com.machiav3lli.derdiedas.ui.StatsActivity" />
     </application>
-
 </manifest>

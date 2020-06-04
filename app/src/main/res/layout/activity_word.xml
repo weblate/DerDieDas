@@ -4,14 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
-    tools:context="com.spitslide.derdiedas.ui.WordActivity">
+    tools:context="com.machiav3lli.derdiedas.ui.WordActivity">
 
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
-
+        android:layout_height="match_parent" />
 </LinearLayout>

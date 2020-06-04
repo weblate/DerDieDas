@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fully_learned_words_all_words"
-            android:textSize="20sp"
-            android:padding="20dp"
-            />
-        <ImageButton
-            android:contentDescription="@string/help"
-            android:id="@+id/fullWords"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/help"
-            android:background="@android:color/transparent"
-            android:onClick="onFullWords"/>
-        <TextView
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/fully_learned_words_all_words"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/word_stats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/placeholder"
-            android:textSize="20sp"
             android:padding="20dp"
-            />
+            android:text="@string/placeholder"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/fullWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/help"
+            android:onClick="onFullWords"
+            android:src="@drawable/ic_round_help_outline_24" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </LinearLayout>

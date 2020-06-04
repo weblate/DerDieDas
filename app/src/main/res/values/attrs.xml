@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <attr name="buttonTextNormal" format="reference|color" />
     <attr name="buttonTextPressed" format="reference|color" />
-
-    <attr name="button_drawable" format="reference" />
-    <attr name="button_animation" format="reference" />
+    <attr name="buttonDrawable" format="reference" />
+    <attr name="buttonAnimation" format="reference" />
     <attr name="dialogBackground" format="reference" />
-
 </resources>
