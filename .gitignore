@@ -1,12 +1,8 @@
 *.iml
+*.pyc
 .gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/vcs.xml
-/.idea/libraries
-/.idea/misc.xml
+.idea
+build
+local.properties
 .DS_Store
-/build
-/captures
-.externalNativeBuild
 /app/release
