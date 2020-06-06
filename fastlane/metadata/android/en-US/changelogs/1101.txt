@@ -1,0 +1,4 @@
+**DerDieDas 1.1.1**
+* Fixed: crashing settings
+* Added: back button
+* Fixed: applying theme on resume

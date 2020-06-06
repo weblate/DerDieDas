@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 int versionMajor = 1
 int versionMinor = 1
-int versionPath = 0
+int versionPath = 1
 
 android {
     compileSdkVersion 29
