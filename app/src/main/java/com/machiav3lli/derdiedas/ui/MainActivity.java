@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        setDayNightTheme(PrefsUtil.getPrefsString(this, Constants.PREFS_THEME));
         super.onResume();
     }
 
