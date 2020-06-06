@@ -3,6 +3,7 @@ package com.machiav3lli.derdiedas.ui;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.machiav3lli.derdiedas.R;
@@ -11,7 +12,13 @@ import com.machiav3lli.derdiedas.utils.DatabaseUtil;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class WordActivity extends AppCompatActivity {
+
+    @BindView(R.id.back)
+    LinearLayoutCompat back;
 
     private List<Noun> nounList;
 
@@ -19,16 +26,18 @@ public class WordActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word);
+        ButterKnife.bind(this);
         nounList = new DatabaseUtil(this).getAllNouns();
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.frame, new WordFragment())
+                .add(R.id.fragment_container, new WordFragment())
                 .commit();
+        back.setOnClickListener(v -> finish());
     }
 
     public void replaceFragment() {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-        fragmentTransaction.replace(R.id.frame, new WordFragment());
+        fragmentTransaction.replace(R.id.fragment_container, new WordFragment());
         fragmentTransaction.commit();
     }
 

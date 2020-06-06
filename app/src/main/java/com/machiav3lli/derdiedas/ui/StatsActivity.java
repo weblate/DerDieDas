@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.machiav3lli.derdiedas.R;
 import com.machiav3lli.derdiedas.utils.DatabaseUtil;
@@ -14,16 +15,25 @@ import com.machiav3lli.derdiedas.utils.FileUtils;
 
 import java.io.UnsupportedEncodingException;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class StatsActivity extends AppCompatActivity {
+
+    @BindView(R.id.back)
+    LinearLayoutCompat back;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats_simple);
+        ButterKnife.bind(this);
         try {
             setWordStats();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        back.setOnClickListener(v -> finish());
     }
 
     private void setWordStats() throws UnsupportedEncodingException {
