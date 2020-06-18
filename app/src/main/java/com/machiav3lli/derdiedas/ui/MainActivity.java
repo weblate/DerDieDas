@@ -51,12 +51,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SettingsActivity.class));
     }
 
-    @Override
-    protected void onResume() {
-        setDayNightTheme(PrefsUtil.getPrefsString(this, Constants.PREFS_THEME));
-        super.onResume();
-    }
-
     private void createDatabaseIfFirstRun() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         if (prefs.getBoolean("firstrun", true)) {
