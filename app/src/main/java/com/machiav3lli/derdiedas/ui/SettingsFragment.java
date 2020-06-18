@@ -19,7 +19,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences, rootKey);
         Preference pref;
-
         pref = findPreference(Constants.PREFS_THEME);
         assert pref != null;
         pref.setOnPreferenceChangeListener((preference, newValue) -> {

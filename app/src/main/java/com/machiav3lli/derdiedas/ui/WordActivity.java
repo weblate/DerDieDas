@@ -28,10 +28,8 @@ public class WordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_word);
         ButterKnife.bind(this);
         nounList = new DatabaseUtil(this).getAllNouns();
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragment_container, new WordFragment())
-                .commit();
-        back.setOnClickListener(v -> finish());
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new WordFragment()).commit();
+        back.setOnClickListener(v -> onBackPressed());
     }
 
     public void replaceFragment() {

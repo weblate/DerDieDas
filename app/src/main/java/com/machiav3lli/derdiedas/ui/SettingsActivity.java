@@ -21,6 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         ButterKnife.bind(this);
-        back.setOnClickListener(v -> finish());
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new SettingsFragment()).commit();
+        back.setOnClickListener(v -> onBackPressed());
     }
 }

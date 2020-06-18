@@ -20,9 +20,8 @@
             app:srcCompat="@drawable/ic_round_arrow_back_32" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
-        class="com.machiav3lli.derdiedas.ui.SettingsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?actionBarSize" />

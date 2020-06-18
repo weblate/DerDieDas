@@ -33,7 +33,7 @@ public class StatsActivity extends AppCompatActivity {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        back.setOnClickListener(v -> finish());
+        back.setOnClickListener(v -> onBackPressed());
     }
 
     private void setWordStats() throws UnsupportedEncodingException {
