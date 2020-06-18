@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
 
 import com.machiav3lli.derdiedas.R;
@@ -18,23 +18,33 @@ import com.machiav3lli.derdiedas.utils.AnimationUtil;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class WordFragment extends Fragment implements View.OnClickListener {
 
     private String correctGender;
-    private TextView nounView;
-    private View v;
     private Noun currentNoun;
     private List<Noun> currentNounList;
+
+    @BindView(R.id.nounView)
+    AppCompatTextView nounView;
+    @BindView(R.id.m)
+    AppCompatButton masculine;
+    @BindView(R.id.n)
+    AppCompatButton neutral;
+    @BindView(R.id.f)
+    AppCompatButton feminine;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.fragment_word, container, false);
-        nounView = v.findViewById(R.id.nounView);
-        v.findViewById(R.id.m).setOnClickListener(this);
-        v.findViewById(R.id.n).setOnClickListener(this);
-        v.findViewById(R.id.f).setOnClickListener(this);
-        return v;
+        View view = inflater.inflate(R.layout.fragment_word, container, false);
+        ButterKnife.bind(this, view);
+        masculine.setOnClickListener(this);
+        neutral.setOnClickListener(this);
+        feminine.setOnClickListener(this);
+        return view;
     }
 
     @Override
@@ -49,7 +59,7 @@ public class WordFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Button pressedButton = (Button) view;
+        AppCompatButton pressedButton = (AppCompatButton) view;
         String pressedButtonGender = getResources().getResourceEntryName(view.getId());
         if (pressedButtonGender.equals(correctGender)) {
             updateList(true);
@@ -57,11 +67,21 @@ public class WordFragment extends Fragment implements View.OnClickListener {
             AnimationUtil.animateJumpAndSlide(getActivity(), nounView, true);
         } else {
             updateList(false);
-            int idResource = getResources().getIdentifier(correctGender, "id", getActivity().getPackageName());
-            Button correctButton = v.findViewById(idResource);
+            AppCompatButton correctButton = getCorrectButton(correctGender);
             AnimationUtil.animateButtonDrawable(getActivity(), correctButton);
             pressedButton.setBackgroundResource(R.drawable.button_wrong);
             AnimationUtil.animateJumpAndSlide(getActivity(), nounView, false);
+        }
+    }
+
+    private AppCompatButton getCorrectButton(String correctGender) {
+        switch (correctGender) {
+            case "f":
+                return feminine;
+            case "m":
+                return masculine;
+            default:
+                return neutral;
         }
     }
 

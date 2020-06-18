@@ -1,21 +1,20 @@
 package com.machiav3lli.derdiedas.utils;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
+
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.machiav3lli.derdiedas.R;
 import com.machiav3lli.derdiedas.ui.WordActivity;
 
 public class AnimationUtil {
 
-    public static void animateButtonDrawable(Context context, Button button) {
-        button.setBackgroundResource(getAnimation(context));
+    public static void animateButtonDrawable(Context context, AppCompatButton button) {
+        button.setBackgroundResource(R.drawable.button_animation_correct);
         AnimationDrawable buttonAnimation = (AnimationDrawable) button.getBackground();
         buttonAnimation.start();
     }
@@ -65,15 +64,5 @@ public class AnimationUtil {
             // durations in button_animation_correct
             nounView.startAnimation(waitAnimation);
         }
-
-    }
-
-    public static int getAnimation(Context context) {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = context.getTheme();
-        theme.resolveAttribute(R.attr.buttonAnimation, typedValue, true);
-        // int color = typedValue.data;
-        int drawableId = typedValue.resourceId;
-        return drawableId;
     }
 }

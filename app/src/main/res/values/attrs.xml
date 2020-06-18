@@ -3,6 +3,5 @@
     <attr name="buttonTextNormal" format="reference|color" />
     <attr name="buttonTextPressed" format="reference|color" />
     <attr name="buttonDrawable" format="reference" />
-    <attr name="buttonAnimation" format="reference" />
     <attr name="dialogBackground" format="reference" />
 </resources>
