@@ -1,6 +1,12 @@
 changelog
 =========
 
+1.2.0 (18.06.2020)
+-------------------
+* fixed: theme not being applied in Main
+* migrated: to private preferences
+* some UI optimizations
+
 1.1.1 (06.06.2020)
 -------------------
 * fixed: crashing settings

@@ -1,0 +1,4 @@
+**DerDieDas 1.1.2**
+* Fixed: theme not being applied in Main
+* Migrated: to private preferences
+* Some UI optimizations
