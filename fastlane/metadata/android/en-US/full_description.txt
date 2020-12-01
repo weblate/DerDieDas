@@ -1,0 +1,9 @@
+Learn German nouns genders in an easy way. This app has almost 10,000 German nouns. The app takes care of repeating the nouns which you haven’t yet learned properly. If you master them, they are removed and the practice progress towards harder words.
+
+Words are ordered by everyday use frequency, which means that the most common words will appear at the start, but through progress less and less known nouns will appear, for which it’s presumably harder to know the correct gender.
+
+<b>Features:</b>
+
+* choose a light or dark theme
+* visual feedback with blue for correct answers and red for wrong answers will help you learn more efficiently
+* track your progress
