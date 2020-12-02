@@ -3,33 +3,28 @@ package com.machiav3lli.derdiedas.ui;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.machiav3lli.derdiedas.R;
 import com.machiav3lli.derdiedas.data.Noun;
+import com.machiav3lli.derdiedas.databinding.ActivityWordBinding;
 import com.machiav3lli.derdiedas.utils.DatabaseUtil;
 
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class WordActivity extends AppCompatActivity {
 
-    @BindView(R.id.back)
-    LinearLayoutCompat back;
-
     private List<Noun> nounList;
+    private ActivityWordBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_word);
-        ButterKnife.bind(this);
+        binding = ActivityWordBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         nounList = new DatabaseUtil(this).getAllNouns();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new WordFragment()).commit();
-        back.setOnClickListener(v -> onBackPressed());
+        binding.back.setOnClickListener(v -> onBackPressed());
     }
 
     public void replaceFragment() {

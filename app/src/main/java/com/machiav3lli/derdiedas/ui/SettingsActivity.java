@@ -4,24 +4,20 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
 
 import com.machiav3lli.derdiedas.R;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.machiav3lli.derdiedas.databinding.ActivitySettingsBinding;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    @BindView(R.id.back)
-    LinearLayoutCompat back;
+    private ActivitySettingsBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        ButterKnife.bind(this);
+        binding = ActivitySettingsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new SettingsFragment()).commit();
-        back.setOnClickListener(v -> onBackPressed());
+        binding.back.setOnClickListener(v -> onBackPressed());
     }
 }

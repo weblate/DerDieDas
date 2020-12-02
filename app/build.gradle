@@ -19,6 +19,12 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            applicationIdSuffix '.debug'
+        }
+    }
+    buildFeatures {
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -28,27 +34,21 @@ android {
         includeInApk false
         includeInBundle false
     }
-    buildToolsVersion '29.0.3'
+    buildToolsVersion '30.0.2'
 }
 
 ext {
     versions = [
-            butterknife       : "10.2.1",
-
-            appcompat         : "1.1.0",
+            appcompat         : "1.2.0",
             preference        : "1.1.1",
-            material          : "1.3.0-alpha01",
+            material          : "1.3.0-alpha04",
 
-            junit             : "1.1.1",
-            espresso          : "3.2.0"
+            junit             : "1.1.2",
+            espresso          : "3.3.0"
     ]
 }
 
 dependencies {
-    //ButterKnife
-    implementation "com.jakewharton:butterknife:${versions.butterknife}"
-    annotationProcessor "com.jakewharton:butterknife-compiler:${versions.butterknife}"
-
     // UI
     implementation "androidx.appcompat:appcompat:${versions.appcompat}"
     implementation "androidx.preference:preference:${versions.preference}"
