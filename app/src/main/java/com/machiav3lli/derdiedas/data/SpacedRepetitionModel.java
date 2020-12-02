@@ -9,7 +9,7 @@ public class SpacedRepetitionModel {
     private static final int TIMES_TO_ANSWER_TO_REMOVE = 5;
 
     public List<Noun> getUpdatedNounList(List<Noun> nounList, Noun noun, boolean isCorrect) {
-        if (nounList.size() == 0) {
+        if (nounList.isEmpty()) {
             return null;
         }
         nounList.remove(0);
