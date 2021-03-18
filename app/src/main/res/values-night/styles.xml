@@ -21,7 +21,6 @@
     </style>
 
     <style name="Button.Layout" parent="Widget.AppCompat.ActionButton">
-        <item name="android:textSize">24sp</item>
         <item name="android:layout_margin">8dp</item>
     </style>
 
