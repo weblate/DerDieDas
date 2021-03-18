@@ -2,10 +2,10 @@
 <resources>
     <color name="app_primary_light">#FFFFFF</color>
     <color name="app_primary_dark">#000000</color>
-    <color name="app_accent_dark">#E0163D</color>
-    <color name="app_accent_light">#F77067</color>
-    <color name="app_secondary_dark">#163de0</color>
-    <color name="app_secondary_light">#67eef7</color>
+    <color name="app_accent_dark">#67F770</color>
+    <color name="app_accent_light">#16E03D</color>
+    <color name="app_secondary_dark">#E0163D</color>
+    <color name="app_secondary_light">#F77067</color>
     <color name="windowBackground_light">#FFFFFF</color>
     <color name="windowBackground_dark">#000000</color>
     <color name="dialogBackground_light">#EEEEEE</color>
