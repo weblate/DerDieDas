@@ -13,7 +13,6 @@ import com.machiav3lli.derdiedas.utils.PrefsUtil;
 import static androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
-    static final String TAG = Constants.classTag(".PrefsFragment");
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

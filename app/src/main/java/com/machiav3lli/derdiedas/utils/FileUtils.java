@@ -11,6 +11,10 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
 public class FileUtils {
+
+    private FileUtils() {
+    }
+
     public static String getNounList(Context context) throws UnsupportedEncodingException {
         InputStream inputStream = context.getResources().openRawResource(R.raw.list_nouns);
         ByteArrayOutputStream result = new ByteArrayOutputStream();
@@ -26,7 +30,7 @@ public class FileUtils {
         return result.toString("UTF-8");
     }
 
-    public static String[] getLines(String string){
+    public static String[] getLines(String string) {
         return string.split("\\r?\\n");
     }
 

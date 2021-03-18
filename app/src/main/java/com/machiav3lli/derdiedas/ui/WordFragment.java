@@ -39,7 +39,7 @@ public class WordFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        currentNounList = ((WordActivity) getActivity()).getCurrentNounList();
+        currentNounList = ((WordActivity) requireActivity()).getCurrentNounList();
         currentNoun = currentNounList.get(0);
         String noun = currentNoun.getNoun();
         correctGender = currentNoun.getGender();
@@ -57,7 +57,7 @@ public class WordFragment extends Fragment implements View.OnClickListener {
         } else {
             updateList(false);
             AppCompatButton correctButton = getCorrectButton(correctGender);
-            AnimationUtil.animateButtonDrawable(getActivity(), correctButton);
+            AnimationUtil.animateButtonDrawable(correctButton);
             pressedButton.setBackgroundResource(R.drawable.button_wrong);
             AnimationUtil.animateJumpAndSlide(getActivity(), binding.nounView, false);
         }
@@ -77,6 +77,6 @@ public class WordFragment extends Fragment implements View.OnClickListener {
     private void updateList(boolean isCorrect) {
         SpacedRepetitionModel model = new SpacedRepetitionModel();
         List<Noun> newList = model.getUpdatedNounList(currentNounList, currentNoun, isCorrect);
-        ((WordActivity) getActivity()).updateNounList(newList);
+        ((WordActivity) requireActivity()).updateNounList(newList);
     }
 }

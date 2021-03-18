@@ -13,6 +13,7 @@ import com.machiav3lli.derdiedas.data.Noun;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO migrate to Room
 public class DatabaseUtil {
 
     private SQLiteDatabase database;

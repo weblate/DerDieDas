@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
+            assert listNouns != null;
             String[] nouns = FileUtils.getLines(listNouns);
 
             final List<Noun> nounList = new ArrayList<>();

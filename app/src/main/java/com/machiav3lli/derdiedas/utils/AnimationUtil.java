@@ -13,7 +13,7 @@ import com.machiav3lli.derdiedas.ui.WordActivity;
 
 public class AnimationUtil {
 
-    public static void animateButtonDrawable(Context context, AppCompatButton button) {
+    public static void animateButtonDrawable(AppCompatButton button) {
         button.setBackgroundResource(R.drawable.button_animation_correct);
         AnimationDrawable buttonAnimation = (AnimationDrawable) button.getBackground();
         buttonAnimation.start();

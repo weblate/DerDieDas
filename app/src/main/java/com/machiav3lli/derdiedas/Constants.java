@@ -8,9 +8,4 @@ public class Constants {
     public static final String TAG = "DerDieDas";
     public static final String PREFS_SHARED = "com.machiav3lli.derdiedas";
     public static final String PREFS_THEME = "themes";
-
-    public static String classTag(String tag) {
-        return TAG + tag;
-    }
-
 }
