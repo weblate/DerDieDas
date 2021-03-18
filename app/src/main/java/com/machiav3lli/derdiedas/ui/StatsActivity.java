@@ -13,6 +13,7 @@ import com.machiav3lli.derdiedas.utils.DatabaseUtil;
 import com.machiav3lli.derdiedas.utils.FileUtils;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Locale;
 
 public class StatsActivity extends AppCompatActivity {
 
@@ -29,13 +30,16 @@ public class StatsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         binding.back.setOnClickListener(v -> onBackPressed());
+        binding.statsInfo.setOnClickListener(v -> onFullWords());
     }
 
     private void setWordStats() throws UnsupportedEncodingException {
         long allNouns = FileUtils.getNounsCount(this);
         long remainingNouns = new DatabaseUtil(this).getNounsCount();
         long learnedWords = allNouns - remainingNouns;
-        ((TextView) findViewById(R.id.word_stats)).setText(String.format("%d / %d", learnedWords, allNouns));
+        ((TextView) findViewById(R.id.word_stats)).setText(
+                String.format(Locale.ENGLISH, "%d / %d", learnedWords, allNouns)
+        );
     }
 
     public void onFullWords() {
