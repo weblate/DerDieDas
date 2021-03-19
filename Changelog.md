@@ -1,6 +1,13 @@
 changelog
 =========
 
+1.2.1 (19.03.2021)
+-------------------
+* Updated: More mainstream colors
+* Fixed: Crash on click stats info
+* Fixed: Button's text size not fitting in all screens
+* Some code and UI cleaned up
+
 1.2.0 (18.06.2020)
 -------------------
 * fixed: theme not being applied in Main

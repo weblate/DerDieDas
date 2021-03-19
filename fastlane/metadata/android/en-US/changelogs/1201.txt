@@ -1,0 +1,4 @@
+* Updated: More mainstream colors
+* Fixed: Crash on click stats info
+* Fixed: Button's text size not fitting in all screens
+* Some code and UI cleaned up
