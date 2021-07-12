@@ -35,11 +35,13 @@ public class StatsActivity extends AppCompatActivity {
 
     private void setWordStats() throws UnsupportedEncodingException {
         long allNouns = FileUtils.getNounsCount(this);
-        long remainingNouns = new DatabaseUtil(this).getNounsCount();
-        long learnedWords = allNouns - remainingNouns;
-        ((TextView) findViewById(R.id.word_stats)).setText(
-                String.format(Locale.ENGLISH, "%d / %d", learnedWords, allNouns)
-        );
+        new Thread(() -> {
+            long remainingNouns = new DatabaseUtil(StatsActivity.this).getNounsCount();
+            long learnedWords = allNouns - remainingNouns;
+            ((TextView) findViewById(R.id.word_stats)).setText(
+                    String.format(Locale.ENGLISH, "%d / %d", learnedWords, allNouns)
+            );
+        }).start();
     }
 
     public void onFullWords() {

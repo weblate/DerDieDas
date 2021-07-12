@@ -16,14 +16,21 @@ public class WordActivity extends AppCompatActivity {
 
     private List<Noun> nounList;
     private ActivityWordBinding binding;
+    private DatabaseUtil database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityWordBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        nounList = new DatabaseUtil(this).getAllNouns();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new WordFragment()).commit();
+        database = new DatabaseUtil(this);
+        new Thread() {
+            @Override
+            public void run() {
+                nounList = database.getAllNouns();
+                getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new WordFragment()).commit();
+            }
+        }.start();
         binding.back.setOnClickListener(v -> onBackPressed());
     }
 
