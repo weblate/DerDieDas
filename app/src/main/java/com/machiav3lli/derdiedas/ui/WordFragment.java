@@ -15,6 +15,7 @@ import com.machiav3lli.derdiedas.data.Noun;
 import com.machiav3lli.derdiedas.data.SpacedRepetitionModel;
 import com.machiav3lli.derdiedas.databinding.FragmentWordBinding;
 import com.machiav3lli.derdiedas.utils.AnimationUtil;
+import com.machiav3lli.derdiedas.utils.NounUtilsKt;
 
 import java.util.List;
 
@@ -43,7 +44,8 @@ public class WordFragment extends Fragment implements View.OnClickListener {
         currentNoun = currentNounList.get(0);
         String noun = currentNoun.getNoun();
         correctGender = currentNoun.getGender();
-        binding.nounView.setText(noun);
+        binding.nounText.setText(noun);
+        binding.translatedText.setText(NounUtilsKt.getStringByName(requireContext(), noun));
     }
 
     @Override
