@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        setDayNightTheme(PrefsUtil.getPrefsString(this, Constants.PREFS_THEME));
+        setDayNightTheme(PrefsUtil.getPrefsString(this, Constants.PREFS_THEME, ""));
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
