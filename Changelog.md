@@ -1,5 +1,12 @@
 changelog
 =========
+2.0.0 (14.07.2021)
+-------------------
+* Update: Migrate to a RoomDatabase
+* Add: Nouns translations (300 for now)
+* Update: Migrate to Kotlin
+* Fix: Bad strings
+* Punch of small fixes and improvments
 
 1.2.1 (19.03.2021)
 -------------------

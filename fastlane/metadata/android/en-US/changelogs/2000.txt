@@ -1,0 +1,6 @@
+WARNING: Progress will be reset
+* Update to a RoomDatabase
+* Add translations (300 for now)
+* Migrate to Kotlin
+* Performance improvment
+* A lot of small fixes
