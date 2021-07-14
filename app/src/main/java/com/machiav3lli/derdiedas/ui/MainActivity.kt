@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setDayNightTheme(getPrefsString(this, PREFS_THEME, ""))
+        setDayNightTheme(getPrefsString(PREFS_THEME))
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -46,24 +46,22 @@ class MainActivity : AppCompatActivity() {
     private fun createDatabaseIfFirstRun() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         if (prefs.getBoolean("firstrun", true)) {
-            var listNouns: String? = null
+            var nounsString: String? = null
             try {
-                listNouns = getNounList(this)
+                nounsString = getNounList(this)
             } catch (e: UnsupportedEncodingException) {
                 e.printStackTrace()
             }
-            val nouns = getLines(
-                listNouns!!
-            )
-            val nounList: MutableList<Noun> = ArrayList()
-            for (line in nouns) {
-                val noun = line.split(",").toTypedArray()[0]
-                val gender = line.split(",").toTypedArray()[1]
+            val nouns = getLines(nounsString!!)
+            val nounsList: MutableList<Noun> = ArrayList()
+            nouns.forEach {
+                val noun = it.split(",").toTypedArray()[0]
+                val gender = it.split(",").toTypedArray()[1]
                 val nounObject = Noun(noun, gender, 0)
-                nounList.add(nounObject)
+                nounsList.add(nounObject)
             }
             Thread {
-                DatabaseUtil(this).addAllNouns(nounList)
+                DatabaseUtil(this).allNouns = nounsList
             }.start()
             prefs.edit().putBoolean("firstrun", false).apply()
         }

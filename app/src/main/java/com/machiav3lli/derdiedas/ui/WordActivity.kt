@@ -19,7 +19,8 @@ class WordActivity : AppCompatActivity() {
         database = DatabaseUtil(this)
         Thread {
             currentNounList = database.allNouns
-            supportFragmentManager.beginTransaction()
+            supportFragmentManager
+                .beginTransaction()
                 .add(R.id.fragment_container, WordFragment()).commit()
         }.start()
         setContentView(binding.root)
@@ -46,8 +47,6 @@ class WordActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Thread {
-            DatabaseUtil(this).addAllNouns(currentNounList)
-        }.start()
+        Thread { DatabaseUtil(this).allNouns = currentNounList }.start()
     }
 }

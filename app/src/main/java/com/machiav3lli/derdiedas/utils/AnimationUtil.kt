@@ -16,7 +16,7 @@ object AnimationUtil {
         buttonAnimation.start()
     }
 
-    fun animateJumpAndSlide(context: Context, nounView: View, isCorrectAnswer: Boolean) {
+    fun View.animateJumpAndSlide(context: Context, isCorrectAnswer: Boolean) {
         val jumpAnim = AnimationUtils.loadAnimation(context, R.anim.jump_animation)
         val waitAnimation = AnimationUtils.loadAnimation(context, R.anim.wait_animation)
         waitAnimation.setAnimationListener(object : Animation.AnimationListener {
@@ -37,13 +37,13 @@ object AnimationUtil {
         // if correct answer, we do jump and after that slide the new fragment,
         // if wrong, we do flash and after that slide the fragment
         if (isCorrectAnswer) {
-            nounView.startAnimation(jumpAnim)
+            startAnimation(jumpAnim)
         } else {
             // we are using this dummy animation which does nothing, to wait for the flashing to end
             // and then we replace the fragment (because AnimationDrawable doesn't have a simple
             // onFinished listener) - this means the duration in this animation has to be the sum of
             // durations in button_animation_correct
-            nounView.startAnimation(waitAnimation)
+            startAnimation(waitAnimation)
         }
     }
 }

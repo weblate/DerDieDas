@@ -23,14 +23,11 @@ object FileUtils {
         return result.toString("UTF-8")
     }
 
-    fun getLines(string: String): Array<String> {
-        return string.split("\n").toTypedArray()
-    }
+    fun getLines(string: String): Array<String> =
+        string.split("\n").toTypedArray()
 
     @Throws(UnsupportedEncodingException::class)
-    fun getNounsCount(context: Context): Long {
-        return getLines(
-            getNounList(context)
-        ).size.toLong()
-    }
+    fun getNounsCount(context: Context) = getLines(
+        getNounList(context)
+    ).size.toLong()
 }

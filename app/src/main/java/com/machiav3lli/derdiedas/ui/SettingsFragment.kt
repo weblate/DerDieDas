@@ -11,10 +11,9 @@ import com.machiav3lli.derdiedas.utils.PrefsUtil.setPrefsString
 class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
-        val pref: Preference? = findPreference(PREFS_THEME)
-        pref?.onPreferenceChangeListener =
+        findPreference<Preference>(PREFS_THEME)?.onPreferenceChangeListener =
             Preference.OnPreferenceChangeListener { _: Preference?, newValue: Any ->
-                setPrefsString(requireContext(), PREFS_THEME, newValue.toString())
+                requireContext().setPrefsString(PREFS_THEME, newValue.toString())
                 when (newValue.toString()) {
                     "light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                     "dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
