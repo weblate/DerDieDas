@@ -13,6 +13,7 @@ import com.machiav3lli.derdiedas.databinding.FragmentWordBinding
 import com.machiav3lli.derdiedas.utils.AnimationUtil.animateButtonDrawable
 import com.machiav3lli.derdiedas.utils.AnimationUtil.animateJumpAndSlide
 import com.machiav3lli.derdiedas.utils.getStringByName
+import com.machiav3lli.derdiedas.utils.updateIds
 
 class WordFragment : Fragment(), View.OnClickListener {
     private var currentNounList: MutableList<Noun> = mutableListOf()
@@ -66,7 +67,7 @@ class WordFragment : Fragment(), View.OnClickListener {
     }
 
     private fun updateList(isCorrect: Boolean) {
-        val newList = currentNounList.getUpdatedNounList(currentNoun, isCorrect)
+        val newList = currentNounList.getUpdatedNounList(currentNoun, isCorrect).updateIds()
         (requireActivity() as WordActivity).updateNounList(newList)
     }
 }

@@ -7,4 +7,9 @@ import androidx.room.PrimaryKey
 class Noun(val noun: String, val gender: String, var timesAnswered: Int) {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
+
+    fun withID(id: Long): Noun {
+        this.id = id
+        return this
+    }
 }
