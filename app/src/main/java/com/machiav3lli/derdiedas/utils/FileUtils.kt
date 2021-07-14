@@ -7,7 +7,6 @@ import java.io.IOException
 import java.io.UnsupportedEncodingException
 
 object FileUtils {
-    @JvmStatic
     @Throws(UnsupportedEncodingException::class)
     fun getNounList(context: Context): String {
         val inputStream = context.resources.openRawResource(R.raw.list_nouns)
@@ -24,12 +23,10 @@ object FileUtils {
         return result.toString("UTF-8")
     }
 
-    @JvmStatic
     fun getLines(string: String): Array<String> {
         return string.split("\n").toTypedArray()
     }
 
-    @JvmStatic
     @Throws(UnsupportedEncodingException::class)
     fun getNounsCount(context: Context): Long {
         return getLines(

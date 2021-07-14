@@ -2,13 +2,12 @@ package com.machiav3lli.derdiedas.data
 
 class SpacedRepetitionModel {
     fun getUpdatedNounList(
-        nounList: MutableList<Noun?>,
+        nounList: MutableList<Noun>,
         noun: Noun,
         isCorrect: Boolean
-    ): List<Noun?>? {
-        if (nounList.isEmpty()) {
-            return null
-        }
+    ): MutableList<Noun> {
+        if (nounList.isEmpty()) return mutableListOf()
+
         nounList.removeAt(0)
         if (!isCorrect) {
             noun.timesAnswered = 0

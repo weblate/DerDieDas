@@ -10,14 +10,12 @@ import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.ui.WordActivity
 
 object AnimationUtil {
-    @JvmStatic
     fun animateButtonDrawable(button: AppCompatButton) {
         button.setBackgroundResource(R.drawable.button_animation_correct)
         val buttonAnimation = button.background as AnimationDrawable
         buttonAnimation.start()
     }
 
-    @JvmStatic
     fun animateJumpAndSlide(context: Context, nounView: View, isCorrectAnswer: Boolean) {
         val jumpAnim = AnimationUtils.loadAnimation(context, R.anim.jump_animation)
         val waitAnimation = AnimationUtils.loadAnimation(context, R.anim.wait_animation)
