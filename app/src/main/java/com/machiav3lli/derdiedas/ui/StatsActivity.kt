@@ -6,8 +6,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.databinding.ActivityStatsBinding
-import com.machiav3lli.derdiedas.utils.DatabaseUtil
 import com.machiav3lli.derdiedas.utils.FileUtils.getNounsCount
+import com.machiav3lli.derdiedas.utils.getNounsCount
 import java.io.UnsupportedEncodingException
 import java.util.*
 
@@ -31,7 +31,7 @@ class StatsActivity : AppCompatActivity() {
     private fun setWordStats() {
         val allNouns = getNounsCount(this)
         Thread {
-            val remainingNouns = DatabaseUtil(this).nounsCount
+            val remainingNouns = this.getNounsCount()
             val learnedWords = allNouns - remainingNouns
             runOnUiThread {
                 findViewById<TextView>(R.id.word_stats).text =

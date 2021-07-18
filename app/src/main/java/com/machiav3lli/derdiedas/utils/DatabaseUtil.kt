@@ -2,19 +2,25 @@ package com.machiav3lli.derdiedas.utils
 
 import android.content.Context
 import com.machiav3lli.derdiedas.data.Noun
-import com.machiav3lli.derdiedas.data.NounDao
-import com.machiav3lli.derdiedas.data.NounDatabase.Companion.getInstance
+import com.machiav3lli.derdiedas.data.NounDatabase
+import java.io.UnsupportedEncodingException
 
-class DatabaseUtil(context: Context) {
-    private val database: NounDao = getInstance(context).nounDao
+fun Context.createNounListFromAsset(): MutableList<Noun> {
+    var nounsString: String? = null
+    try {
+        nounsString = FileUtils.getNounList(this)
+    } catch (e: UnsupportedEncodingException) {
+        e.printStackTrace()
+    }
+    val nouns = FileUtils.getLines(nounsString!!)
+    return nouns.map {
+        val noun = it.split(",").toTypedArray()[0]
+        val gender = it.split(",").toTypedArray()[1]
+        Noun(noun, gender, 0)
+    }.toMutableList()
+}
 
-    var allNouns: MutableList<Noun>
-        get() = database.all.toMutableList()
-        set(value) {
-            database.deleteAll()
-            database.insert(value)
-        }
-
-    val nounsCount: Long
-        get() = database.count()
+fun Context.getNounsCount(): Long {
+    val db = NounDatabase.getInstance(this)
+    return db.nounDao.count
 }

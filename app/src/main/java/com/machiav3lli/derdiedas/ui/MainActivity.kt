@@ -6,14 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import com.machiav3lli.derdiedas.PREFS_THEME
-import com.machiav3lli.derdiedas.data.Noun
+import com.machiav3lli.derdiedas.data.NounDatabase
 import com.machiav3lli.derdiedas.databinding.ActivityMainBinding
-import com.machiav3lli.derdiedas.utils.DatabaseUtil
-import com.machiav3lli.derdiedas.utils.FileUtils.getLines
-import com.machiav3lli.derdiedas.utils.FileUtils.getNounList
 import com.machiav3lli.derdiedas.utils.PrefsUtil.getPrefsString
-import java.io.UnsupportedEncodingException
-import java.util.*
+import com.machiav3lli.derdiedas.utils.createNounListFromAsset
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -23,7 +19,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        createDatabaseIfFirstRun()
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        if (prefs.getBoolean("firstrun", true)) {
+            Thread {
+                NounDatabase.getInstance(this).let {
+                    it.nounDao.deleteAll()
+                    it.nounDao.insert(createNounListFromAsset())
+                }
+            }.start()
+            prefs.edit().putBoolean("firstrun", false).apply()
+        }
     }
 
     override fun onStart() {
@@ -40,30 +45,6 @@ class MainActivity : AppCompatActivity() {
         }
         binding.settings.setOnClickListener {
             startActivity(Intent(baseContext, SettingsActivity::class.java))
-        }
-    }
-
-    private fun createDatabaseIfFirstRun() {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        if (prefs.getBoolean("firstrun", true)) {
-            var nounsString: String? = null
-            try {
-                nounsString = getNounList(this)
-            } catch (e: UnsupportedEncodingException) {
-                e.printStackTrace()
-            }
-            val nouns = getLines(nounsString!!)
-            val nounsList: MutableList<Noun> = ArrayList()
-            nouns.forEach {
-                val noun = it.split(",").toTypedArray()[0]
-                val gender = it.split(",").toTypedArray()[1]
-                val nounObject = Noun(noun, gender, 0)
-                nounsList.add(nounObject)
-            }
-            Thread {
-                DatabaseUtil(this).allNouns = nounsList
-            }.start()
-            prefs.edit().putBoolean("firstrun", false).apply()
         }
     }
 
