@@ -33,8 +33,10 @@ class StatsActivity : AppCompatActivity() {
         Thread {
             val remainingNouns = DatabaseUtil(this).nounsCount
             val learnedWords = allNouns - remainingNouns
-            findViewById<TextView>(R.id.word_stats).text =
-                String.format(Locale.ENGLISH, "%d / %d", learnedWords, allNouns)
+            runOnUiThread {
+                findViewById<TextView>(R.id.word_stats).text =
+                    String.format(Locale.ENGLISH, "%d / %d", learnedWords, allNouns)
+            }
         }.start()
     }
 
