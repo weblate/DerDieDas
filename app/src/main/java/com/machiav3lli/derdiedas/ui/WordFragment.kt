@@ -12,14 +12,16 @@ import com.machiav3lli.derdiedas.data.getUpdatedNounList
 import com.machiav3lli.derdiedas.databinding.FragmentWordBinding
 import com.machiav3lli.derdiedas.utils.AnimationUtil.animateButtonDrawable
 import com.machiav3lli.derdiedas.utils.AnimationUtil.animateJumpAndSlide
+import com.machiav3lli.derdiedas.utils.createNounListFromAsset
 import com.machiav3lli.derdiedas.utils.getStringByName
 import com.machiav3lli.derdiedas.utils.updateIds
 
 class WordFragment : Fragment(), View.OnClickListener {
-    private var currentNounList: MutableList<Noun> = mutableListOf()
-    private lateinit var currentNoun: Noun
+    private var currentNoun: Noun? = null
     private var correctGender: String? = null
     private lateinit var binding: FragmentWordBinding
+    private val wordActivity: WordActivity
+        get() = (requireActivity() as WordActivity)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,17 +33,33 @@ class WordFragment : Fragment(), View.OnClickListener {
         binding.m.setOnClickListener(this)
         binding.n.setOnClickListener(this)
         binding.f.setOnClickListener(this)
+        if (wordActivity.allNouns.isNotEmpty())
+            currentNoun = wordActivity.allNouns[0]
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        currentNounList = (requireActivity() as WordActivity).currentNounList
-        currentNoun = currentNounList[0]
-        val noun = currentNoun.noun
-        correctGender = currentNoun.gender
-        binding.nounText.text = noun
-        binding.translatedText.text = requireContext().getStringByName(noun)
+        if (currentNoun != null) {
+            val noun = currentNoun!!.noun
+            correctGender = currentNoun!!.gender
+            binding.nounText.text = noun
+            binding.translatedText.text = requireContext().getStringByName(noun)
+        } else {
+            binding.nounText.text = getString(R.string.finished)
+            binding.translatedText.text = null
+            binding.m.text = getString(R.string.dialog_yes)
+            binding.m.setOnClickListener {
+                wordActivity.allNouns =
+                    requireContext().createNounListFromAsset()
+                requireActivity().onBackPressed()
+            }
+            binding.f.text = getString(R.string.dialog_no)
+            binding.f.setOnClickListener {
+                requireActivity().onBackPressed()
+            }
+            binding.n.visibility = View.GONE
+        }
     }
 
     override fun onClick(view: View) {
@@ -67,7 +85,8 @@ class WordFragment : Fragment(), View.OnClickListener {
     }
 
     private fun updateList(isCorrect: Boolean) {
-        val newList = currentNounList.getUpdatedNounList(currentNoun, isCorrect).updateIds()
-        (requireActivity() as WordActivity).updateNounList(newList)
+        wordActivity.allNouns = wordActivity.allNouns
+            .getUpdatedNounList(currentNoun!!, isCorrect)
+            .updateIds()
     }
 }

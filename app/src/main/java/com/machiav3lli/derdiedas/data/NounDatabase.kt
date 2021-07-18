@@ -24,6 +24,7 @@ abstract class NounDatabase : RoomDatabase() {
                             NOUN_DB_NAME
                         )
                         .fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
                         .build()
                 }
                 return INSTANCE!!

@@ -2,27 +2,32 @@ package com.machiav3lli.derdiedas.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.data.Noun
+import com.machiav3lli.derdiedas.data.NounDatabase
+import com.machiav3lli.derdiedas.data.WordViewModel
+import com.machiav3lli.derdiedas.data.WordViewModelFactory
 import com.machiav3lli.derdiedas.databinding.ActivityWordBinding
-import com.machiav3lli.derdiedas.utils.DatabaseUtil
 
 class WordActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWordBinding
-    private lateinit var database: DatabaseUtil
-    var currentNounList: MutableList<Noun> = mutableListOf()
-        private set
+    private lateinit var viewModel: WordViewModel
+    var allNouns: MutableList<Noun>
+        get() = viewModel.allNouns.value ?: mutableListOf()
+        set(value) {
+            viewModel.updateAllNouns(value)
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWordBinding.inflate(layoutInflater)
-        database = DatabaseUtil(this)
-        Thread {
-            currentNounList = database.allNouns
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.fragment_container, WordFragment()).commit()
-        }.start()
+        val nounDao = NounDatabase.getInstance(this).nounDao
+        val viewModelFactory = WordViewModelFactory(nounDao, application)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(WordViewModel::class.java)
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragment_container, WordFragment()).commit()
         setContentView(binding.root)
     }
 
@@ -39,14 +44,5 @@ class WordActivity : AppCompatActivity() {
         )
         fragmentTransaction.replace(R.id.fragment_container, WordFragment())
         fragmentTransaction.commit()
-    }
-
-    fun updateNounList(nounList: MutableList<Noun>) {
-        currentNounList = nounList
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Thread { DatabaseUtil(this).allNouns = currentNounList }.start()
     }
 }

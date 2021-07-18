@@ -8,8 +8,8 @@ import androidx.room.Update
 
 @Dao
 interface NounDao {
-    @Query("SELECT COUNT(*) FROM noun")
-    fun count(): Long
+    @get:Query("SELECT COUNT(*) FROM noun")
+    val count: Long
 
     @Insert
     @Throws(SQLException::class)
@@ -20,7 +20,7 @@ interface NounDao {
     fun insert(nouns: List<Noun>)
 
     @get:Query("SELECT * FROM noun")
-    val all: List<Noun>
+    val all: MutableList<Noun>
 
     @Update
     fun update(noun: Noun)
