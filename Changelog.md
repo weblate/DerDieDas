@@ -1,5 +1,12 @@
 changelog
 =========
+2.0.1 (19.07.2021)
+------------------
+* Add: WordViewModel.
+* Add: Choice to restart when all the words are fully learned.
+* Fix: Crashing on practice & stats
+* Update: Convert DatabaseUtil to file and abstract creating noun list out of the into it
+
 2.0.0 (14.07.2021)
 -------------------
 * Update: Migrate to a RoomDatabase

@@ -1,0 +1,4 @@
+* Add: WordViewModel.
+* Add: Choice to restart when all the words are fully learned.
+* Fix: Crashing on practice & stats
+* Update: Convert DatabaseUtil to file and abstract creating noun list out of the into it
