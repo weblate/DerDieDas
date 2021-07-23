@@ -126,7 +126,7 @@
     <string name="Info">Information</string>
     <string name="Gott">Dieu</string>
     <string name="Rede">Discours</string>
-    <string name="Start">Démarrage</string>
+    <string name="Start">Démarrage/Décollage</string>
     <string name="Herz">Cœur</string>
     <string name="Leiter">Directeur/Échelle</string>
     <string name="Arzt">Médecin</string>
@@ -248,7 +248,7 @@
     <string name="Welt">Monde</string>
     <string name="Geschichte">Histoire</string>
     <string name="Thema">Sujet/Thème</string>
-    <string name="Gemeinde">Communauté</string>
+    <string name="Gemeinde">Commune/Communauté</string>
     <string name="Mai">Mai</string>
     <string name="Weg">Chemin</string>
     <string name="Fall">Cas</string>
@@ -307,9 +307,9 @@
     <string name="die">Die</string>
     <string name="das">Das</string>
     <string name="der">Der</string>
-    <string name="noun_placeholder">Bundeswirtschaftsministerium</string>
+    <string name="noun_placeholder">Ministère fédéral de l\'Économie</string>
     <string name="placeholder">123 / 456</string>
-    <string name="rate">Taux</string>
+    <string name="rate">Évaluer</string>
     <string name="share">Partager</string>
     <string name="stats">Stats</string>
     <string name="settings">Paramètres</string>
@@ -321,4 +321,7 @@
 \nSi on répond correctement, mais ensuite incorrectement avant d\'atteindre 5 fois d\'affilée, le compteur est remis à 0 et le processus d\'obtention de 5 fois d\'affilée recommence pour le nom en question.</string>
     <string name="full_words_title">Complètement appris</string>
     <string name="app_name">Der Die Das</string>
+    <string name="dialog_no">Non</string>
+    <string name="dialog_yes">Oui</string>
+    <string name="finished">Tu as appris tous les noms, tu veux recommencer \?</string>
 </resources>
