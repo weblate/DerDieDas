@@ -99,9 +99,9 @@
     <string name="theme_dark">Oscuro</string>
     <string name="theme_light">Claro</string>
     <string name="prefs_theme">Tema</string>
-    <string name="die">La</string>
-    <string name="das">El (neutro)</string>
-    <string name="der">El (masc)</string>
+    <string name="die">Die La</string>
+    <string name="das">Das El (neutro)</string>
+    <string name="der">Der El (masc)</string>
     <string name="noun_placeholder">Ministerio Federal de Economía y Tecnología</string>
     <string name="placeholder">123 / 456</string>
     <string name="rate">Califique</string>
@@ -121,4 +121,18 @@
     <string name="dialog_yes">Si</string>
     <string name="finished">Ha aprendido todos los sustantivos, ¿quieres empezar de nuevo\?</string>
     <string name="theme_system">Tema del sistema</string>
+    <string name="Saison">Estación</string>
+    <string name="Angabe">Indicación</string>
+    <string name="Vorsitzende">Presidente</string>
+    <string name="Jahrhundert">Siglo</string>
+    <string name="Bereich">Ámbito</string>
+    <string name="Ergebnis">Resultado</string>
+    <string name="Musik">Música</string>
+    <string name="Mitarbeiter">Empleado</string>
+    <string name="Herr">Señor</string>
+    <string name="Kreis">Círculo</string>
+    <string name="Person">Persona</string>
+    <string name="Chance">Oportunidad</string>
+    <string name="Anfang">Inicio</string>
+    <string name="Schüler">Alumno</string>
 </resources>
