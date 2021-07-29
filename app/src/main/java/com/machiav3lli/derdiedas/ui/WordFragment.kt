@@ -54,7 +54,7 @@ class WordFragment : Fragment(), View.OnClickListener {
             binding.m.setOnClickListener {
                 wordActivity.allNouns =
                     requireContext().createNounListFromAsset()
-                requireActivity().onBackPressed()
+                (requireActivity() as WordActivity).replaceFragment()
             }
             binding.f.text = getString(R.string.dialog_no)
             binding.f.setOnClickListener {
