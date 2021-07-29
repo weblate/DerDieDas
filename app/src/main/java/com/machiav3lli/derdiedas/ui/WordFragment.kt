@@ -23,6 +23,8 @@ class WordFragment : Fragment(), View.OnClickListener {
     private val wordActivity: WordActivity
         get() = (requireActivity() as WordActivity)
 
+    private var firstClickBoolean = true
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -65,17 +67,18 @@ class WordFragment : Fragment(), View.OnClickListener {
     override fun onClick(view: View) {
         val pressedButton = view as AppCompatButton
         val pressedButtonGender = resources.getResourceEntryName(view.getId())
-        if (pressedButtonGender == correctGender) {
+        if (pressedButtonGender == correctGender && firstClickBoolean) {
             updateList(true)
             pressedButton.setBackgroundResource(R.drawable.button_correct)
             binding.nounView.animateJumpAndSlide(requireActivity(), true)
-        } else {
+        } else if (firstClickBoolean) {
             updateList(false)
             val correctButton = getCorrectButton(correctGender)
             animateButtonDrawable(correctButton)
             pressedButton.setBackgroundResource(R.drawable.button_wrong)
             binding.nounView.animateJumpAndSlide(requireActivity(), false)
         }
+        firstClickBoolean = false
     }
 
     private fun getCorrectButton(correctGender: String?): AppCompatButton = when (correctGender) {
