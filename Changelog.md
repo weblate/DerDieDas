@@ -1,5 +1,13 @@
 changelog
 =========
+2.0.2 (30.07.2021)
+------------------
+* Update: Start again instead of returning back to the main menu
+* Fix: Clearing the nouns list on double clicking a choice
+* Add: Words' translation till 500th
+* Add: Translations to French, Norwegian, Spanish & Italian
+* Update: Dependencies & Gradle
+
 2.0.1 (19.07.2021)
 ------------------
 * Add: WordViewModel.

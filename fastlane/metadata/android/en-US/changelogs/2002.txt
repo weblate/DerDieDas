@@ -1,0 +1,4 @@
+* Update: Start again instead of returning back to the main menu
+* Fix: Clearing the nouns list on double clicking a choice
+* Add: Words' translation till 500th
+* Add: Translations to French, Norwegian, Spanish & Italian
