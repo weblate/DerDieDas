@@ -23,7 +23,7 @@
     <string name="dialog_no">No</string>
     <!-- 1-100 -->
     <string name="Jahr">Year</string>
-    <string name="Uhr">Hour</string>
+    <string name="Uhr">Clock</string>
     <string name="Prozent">Percent</string>
     <string name="Zeit">Time</string>
     <string name="Kind">Kid</string>
