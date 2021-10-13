@@ -552,7 +552,6 @@ Zustand,m
 Nachmittag,m
 Gastgeber,m
 Einfluss,m
-Wiener,m
 Gelände,n
 Armee,f
 Nürnberger,m
