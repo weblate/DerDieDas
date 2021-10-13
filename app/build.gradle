@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId 'com.machiav3lli.derdiedas'
         minSdkVersion 24
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode = 2002
         versionName = "2.0.2"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
