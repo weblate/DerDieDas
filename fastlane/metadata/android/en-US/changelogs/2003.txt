@@ -1,0 +1,3 @@
+* Update: Target- and CompiledSDK 31
+* Add: Words' translation till 1000th
+* Update: Dependencies & Gradle

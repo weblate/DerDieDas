@@ -1,5 +1,11 @@
 changelog
 =========
+2.0.3 (13.10.2021)
+------------------
+* Update: Target- and CompiledSDK 31
+* Add: Words' translation till 1000th
+* Update: Dependencies & Gradle
+
 2.0.2 (30.07.2021)
 ------------------
 * Update: Start again instead of returning back to the main menu
