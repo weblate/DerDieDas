@@ -30,6 +30,10 @@ Try the app by using the apk under [releases](https://github.com/machiav3lli/Der
 
 [Digitapex](https://github.com/digitapex) for writting this app at the first place.
 
+## Donations
+
+I, myself acknowledge the role of the donations to motivate the work on FOSS projects, but in the state of how dynamic everything around my FOSS-contributions is, I would prefer to not take donations for now (the same answer as the last years). Nevertheless this project wouldn't have the accessibility it has without translations, which you the community drive and for which Weblate provides a platform. That's why I would you suggest you to consider [donating to Weblate](https://weblate.org/donate).
+
 ## author
 
 Antonios Hazim
