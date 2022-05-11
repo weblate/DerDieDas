@@ -12,6 +12,7 @@
         <item name="buttonDrawable">@drawable/selectors_background</item>
         <item name="dialogBackground">@color/dialogBackground_dark</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="dialogCornerRadius">15dp</item>
     </style>
 
     <style name="AlertDialogCustom" parent="Theme.MaterialComponents.Dialog.Alert">
