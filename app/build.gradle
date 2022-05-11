@@ -36,17 +36,17 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21"
     //Libs
-    implementation "androidx.core:core-ktx:1.6.0"
-    implementation "androidx.room:room-runtime:2.3.0"
-    implementation "androidx.room:room-ktx:2.3.0"
-    kapt("androidx.room:room-compiler:2.3.0")
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "androidx.room:room-runtime:2.4.2"
+    implementation "androidx.room:room-ktx:2.4.2"
+    kapt("androidx.room:room-compiler:2.4.2")
 
     // UI
     implementation "androidx.appcompat:appcompat:1.3.1"
-    implementation "androidx.preference:preference-ktx:1.1.1"
-    implementation "com.google.android.material:material:1.4.0"
+    implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation "com.google.android.material:material:1.6.0"
 
     // Test
     implementation "androidx.test.ext:junit:1.1.3"
