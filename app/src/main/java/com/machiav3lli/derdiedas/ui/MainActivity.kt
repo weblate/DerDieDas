@@ -8,8 +8,8 @@ import androidx.preference.PreferenceManager
 import com.machiav3lli.derdiedas.PREFS_THEME
 import com.machiav3lli.derdiedas.data.NounDatabase
 import com.machiav3lli.derdiedas.databinding.ActivityMainBinding
-import com.machiav3lli.derdiedas.utils.PrefsUtil.getPrefsString
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
+import com.machiav3lli.derdiedas.utils.getPrefsString
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

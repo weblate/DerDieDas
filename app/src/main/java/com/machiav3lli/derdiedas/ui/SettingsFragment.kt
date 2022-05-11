@@ -6,7 +6,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.machiav3lli.derdiedas.PREFS_THEME
 import com.machiav3lli.derdiedas.R
-import com.machiav3lli.derdiedas.utils.PrefsUtil.setPrefsString
+import com.machiav3lli.derdiedas.utils.setPrefsString
 
 class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
