@@ -4,6 +4,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 31
+    namespace 'com.machiav3lli.derdiedas'
     defaultConfig {
         applicationId 'com.machiav3lli.derdiedas'
         minSdkVersion 24
