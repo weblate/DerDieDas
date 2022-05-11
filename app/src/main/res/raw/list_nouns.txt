@@ -1055,7 +1055,6 @@ Duell,n
 Schrift,f
 Laut,m
 Glauben,m
-Hamburger,m
 Fähigkeit,f
 Verwendung,f
 Video,n
