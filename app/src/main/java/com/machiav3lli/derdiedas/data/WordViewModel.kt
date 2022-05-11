@@ -1,9 +1,7 @@
 package com.machiav3lli.derdiedas.data
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -33,6 +31,19 @@ class WordViewModel(private val nounDao: NounDao, application: Application) :
         withContext(Dispatchers.IO) {
             nounDao.deleteAll()
             nounDao.insert(newList)
+        }
+    }
+
+    class Factory(
+        private val database: NounDao,
+        private val application: Application
+    ) : ViewModelProvider.Factory {
+        @Suppress("unchecked_cast")
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            if (modelClass.isAssignableFrom(WordViewModel::class.java)) {
+                return WordViewModel(database, application) as T
+            }
+            throw IllegalArgumentException("Unknown ViewModel class")
         }
     }
 }

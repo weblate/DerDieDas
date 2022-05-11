@@ -7,7 +7,6 @@ import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.data.Noun
 import com.machiav3lli.derdiedas.data.NounDatabase
 import com.machiav3lli.derdiedas.data.WordViewModel
-import com.machiav3lli.derdiedas.data.WordViewModelFactory
 import com.machiav3lli.derdiedas.databinding.ActivityWordBinding
 
 class WordActivity : AppCompatActivity() {
@@ -23,7 +22,7 @@ class WordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWordBinding.inflate(layoutInflater)
         val nounDao = NounDatabase.getInstance(this).nounDao
-        val viewModelFactory = WordViewModelFactory(nounDao, application)
+        val viewModelFactory = WordViewModel.Factory(nounDao, application)
         viewModel = ViewModelProvider(this, viewModelFactory).get(WordViewModel::class.java)
         supportFragmentManager
             .beginTransaction()
