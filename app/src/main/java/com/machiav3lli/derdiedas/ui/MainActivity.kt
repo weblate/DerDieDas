@@ -5,17 +5,16 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
-import com.machiav3lli.derdiedas.PREFS_THEME
 import com.machiav3lli.derdiedas.data.NounDatabase
 import com.machiav3lli.derdiedas.databinding.ActivityMainBinding
+import com.machiav3lli.derdiedas.utils.appTheme
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
-import com.machiav3lli.derdiedas.utils.getPrefsString
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setDayNightTheme(getPrefsString(PREFS_THEME))
+        setDayNightTheme(appTheme)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
