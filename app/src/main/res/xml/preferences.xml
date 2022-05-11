@@ -9,4 +9,10 @@
         app:key="themes"
         app:title="@string/prefs_theme"
         app:useSimpleSummaryProvider="true" />
+
+    <com.machiav3lli.derdiedas.utils.LanguagePref
+        android:key="language"
+        android:title="@string/prefs_language"
+        app:defaultValue="system"
+        app:iconSpaceReserved="false" />
 </androidx.preference.PreferenceScreen>

@@ -18,6 +18,8 @@
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
     <string name="theme_system">System\'s theme</string>
+    <string name="prefs_language">Language</string>
+    <string name="prefs_language_system">System default</string>
     <string name="finished">Fully learned all nouns, want to start over?</string>
     <string name="dialog_yes">Yes</string>
     <string name="dialog_no">No</string>
