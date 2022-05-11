@@ -3,12 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 31
     namespace 'com.machiav3lli.derdiedas'
+
+    compileSdkVersion 32
     defaultConfig {
         applicationId 'com.machiav3lli.derdiedas'
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode = 2003
         versionName = "2.0.3"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -33,7 +34,6 @@ android {
         includeInApk false
         includeInBundle false
     }
-    buildToolsVersion '30.0.3'
 }
 
 dependencies {
