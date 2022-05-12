@@ -1,5 +1,13 @@
 changelog
 =========
+2.1.0 (12.05.2022)
+------------------
+* Add: 200 words' translations (total 1200)
+* Add: Languages setting
+* Update translations: Polish, Ukrainian, Russian, French, Norwegian
+* Update: Target- and CompileSDK 32
++ other small fixes
+
 2.0.3 (13.10.2021)
 ------------------
 * Update: Target- and CompiledSDK 31
