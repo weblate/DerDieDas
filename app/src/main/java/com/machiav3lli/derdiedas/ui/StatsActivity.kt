@@ -3,7 +3,6 @@ package com.machiav3lli.derdiedas.ui
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.databinding.ActivityStatsBinding
 import com.machiav3lli.derdiedas.utils.FileUtils.getNounsCount
@@ -11,7 +10,7 @@ import com.machiav3lli.derdiedas.utils.getNounsCount
 import java.io.UnsupportedEncodingException
 import java.util.*
 
-class StatsActivity : AppCompatActivity() {
+class StatsActivity : BaseActivity() {
     private lateinit var binding: ActivityStatsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

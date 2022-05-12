@@ -1,7 +1,6 @@
 package com.machiav3lli.derdiedas.ui
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.data.Noun
@@ -9,7 +8,7 @@ import com.machiav3lli.derdiedas.data.NounDatabase
 import com.machiav3lli.derdiedas.data.WordViewModel
 import com.machiav3lli.derdiedas.databinding.ActivityWordBinding
 
-class WordActivity : AppCompatActivity() {
+class WordActivity : BaseActivity() {
     private lateinit var binding: ActivityWordBinding
     private lateinit var viewModel: WordViewModel
     var allNouns: MutableList<Noun>

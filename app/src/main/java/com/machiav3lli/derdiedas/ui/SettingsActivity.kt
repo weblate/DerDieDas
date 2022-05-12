@@ -1,11 +1,10 @@
 package com.machiav3lli.derdiedas.ui
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.databinding.ActivitySettingsBinding
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : BaseActivity() {
     private lateinit var binding: ActivitySettingsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

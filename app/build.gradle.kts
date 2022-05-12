@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -60,3 +62,22 @@ dependencies {
     implementation("androidx.test.ext:junit:1.1.3")
     implementation("androidx.test.espresso:espresso-core:3.4.0")
 }
+
+// using a task as a preBuild dependency instead of a function that takes some time insures that it runs
+task("detectAndroidLocals") {
+    val langsList: MutableSet<String> = HashSet()
+
+    // in /res are (almost) all languages that have a translated string is saved. this is safer and saves some time
+    fileTree("src/main/res").visit {
+        if (this.file.path.endsWith("strings.xml")
+            && this.file.canonicalFile.readText().contains("<string")
+        ) {
+            var languageCode = this.file.parentFile.name.replace("values-", "")
+            languageCode = if (languageCode == "values") "en" else languageCode
+            langsList.add(languageCode)
+        }
+    }
+    val langsListString = "{${langsList.joinToString(",") { "\"${it}\"" }}}"
+    android.defaultConfig.buildConfigField("String[]", "DETECTED_LOCALES", langsListString)
+}
+tasks.preBuild.dependsOn("detectAndroidLocals")

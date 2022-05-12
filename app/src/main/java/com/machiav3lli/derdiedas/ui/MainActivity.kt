@@ -2,7 +2,6 @@ package com.machiav3lli.derdiedas.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import com.machiav3lli.derdiedas.data.NounDatabase
@@ -10,7 +9,7 @@ import com.machiav3lli.derdiedas.databinding.ActivityMainBinding
 import com.machiav3lli.derdiedas.utils.appTheme
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
