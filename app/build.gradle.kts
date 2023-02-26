@@ -14,8 +14,8 @@ android {
         applicationId = "com.machiav3lli.derdiedas"
         minSdk = 24
         targetSdk = 33
-        versionCode = 2100
-        versionName = "2.1.0"
+        versionCode = 2101
+        versionName = "2.1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

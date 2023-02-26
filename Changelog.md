@@ -1,5 +1,12 @@
 changelog
 =========
+2.1.1 (26.02.2023)
+------------------
+* Add: Show right article beside word after clicking
+* Add: New icon
+* Update TargetSDK 33
+* 40+ translation contributions
+
 2.1.0 (12.05.2022)
 ------------------
 * Add: 200 words' translations (total 1200)
