@@ -49,18 +49,19 @@ android {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0")
     //Libs
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.room:room-runtime:2.4.2")
-    implementation("androidx.room:room-ktx:2.4.2")
-    kapt("androidx.room:room-compiler:2.4.2")
+    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.room:room-runtime:2.5.0")
+    implementation("androidx.room:room-ktx:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
 
     // UI
     implementation("androidx.preference:preference-ktx:1.2.0")
-    implementation("com.google.android.material:material:1.6.0")
+    implementation("com.google.android.material:material:1.8.0")
 
     // Test
-    implementation("androidx.test.ext:junit:1.1.3")
-    implementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation("androidx.test.ext:junit:1.1.5")
+    implementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
 // using a task as a preBuild dependency instead of a function that takes some time insures that it runs
