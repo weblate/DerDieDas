@@ -70,12 +70,14 @@ class WordFragment : Fragment(), View.OnClickListener {
         if (pressedButtonGender == correctGender && firstClickBoolean) {
             updateList(true)
             pressedButton.setBackgroundResource(R.drawable.button_correct)
+            binding.nounText.text = "${pressedButton.text} ${binding.nounText.text}"
             binding.nounView.animateJumpAndSlide(requireActivity(), true)
         } else if (firstClickBoolean) {
             updateList(false)
             val correctButton = getCorrectButton(correctGender)
             animateButtonDrawable(correctButton)
             pressedButton.setBackgroundResource(R.drawable.button_wrong)
+            binding.nounText.text = "${correctButton.text} ${binding.nounText.text}"
             binding.nounView.animateJumpAndSlide(requireActivity(), false)
         }
         firstClickBoolean = false
