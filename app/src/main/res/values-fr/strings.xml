@@ -128,7 +128,7 @@
     <string name="Rede">Discours</string>
     <string name="Start">Démarrage/Décollage</string>
     <string name="Herz">Cœur</string>
-    <string name="Leiter">Directeur/Échelle</string>
+    <string name="Leiter">Directeur</string>
     <string name="Arzt">Médecin</string>
     <string name="Junge">Garçon</string>
     <string name="Unterstützung">Soutien/Assistance</string>
@@ -337,4 +337,28 @@
     <string name="Bruder">Frère</string>
     <string name="Zusammenhang">Cohérence/connexion</string>
     <string name="Arbeitsplatz">Lieu de travail</string>
+    <string name="prefs_language">Langue</string>
+    <string name="Kurs">Cours</string>
+    <string name="Vorjahr">Année précédente</string>
+    <string name="Parlament">Parlement</string>
+    <string name="Experte">Expert</string>
+    <string name="Regel">Règle</string>
+    <string name="Position">Position</string>
+    <string name="Krankenhaus">Hôpital</string>
+    <string name="Hoffnung">Espoir</string>
+    <string name="Wettbewerb">Compétition</string>
+    <string name="Lied">Chanson</string>
+    <string name="Geschäftsführer">Directeur</string>
+    <string name="Meister">Maître</string>
+    <string name="Fuß">Pied</string>
+    <string name="Licht">Lumière</string>
+    <string name="Einwohner">Habitant</string>
+    <string name="Zentrum">Centre</string>
+    <string name="Lauf">Course</string>
+    <string name="Rennen">Course</string>
+    <string name="König">Roi</string>
+    <string name="Schaden">Dégâts</string>
+    <string name="Datum">Date</string>
+    <string name="Antwort">Réponse</string>
+    <string name="Roman">Roman</string>
 </resources>
