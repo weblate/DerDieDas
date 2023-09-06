@@ -60,7 +60,7 @@
     <string name="Zahl">getal</string>
     <string name="Dezember">december</string>
     <string name="Dienstag">dinsdag</string>
-    <string name="Werk">werk</string>
+    <string name="Werk">werk; fabriek; in het werk stellen</string>
     <string name="Information">informatie</string>
     <string name="Region">regio</string>
     <string name="Buch">boek</string>
@@ -274,7 +274,7 @@
     <string name="Zustand">toestand</string>
     <string name="Gastgeber">gastheer, gastvrouw</string>
     <string name="Einfluss">invloed</string>
-    <string name="Gelände">gebied</string>
+    <string name="Gelände">terrein</string>
     <string name="Armee">leger</string>
     <string name="Einheit">eenheid</string>
     <string name="Leser">lezer</string>
@@ -401,7 +401,7 @@
     <string name="Sortierung">sortering</string>
     <string name="Ensemble">ensemble</string>
     <string name="Wissenschaftler">wetenschapper</string>
-    <string name="Service">dienst</string>
+    <string name="Service">dienst, service</string>
     <string name="Spiegel">spiegel</string>
     <string name="Essen">eten</string>
     <string name="Profi">professional (ook: Professional)</string>
@@ -467,7 +467,7 @@
     <string name="Benutzer">gebruiker</string>
     <string name="Regen">regen</string>
     <string name="Ehe">huwelijk</string>
-    <string name="Institution">instituut</string>
+    <string name="Institution">institutie</string>
     <string name="Ministerium">ministerie</string>
     <string name="Weltmeister">wereldkampioen</string>
     <string name="Zugang">toegang</string>
@@ -626,7 +626,7 @@
     <string name="Kraft">kracht</string>
     <string name="Dollar">dollar</string>
     <string name="Mädchen">meisje</string>
-    <string name="Bericht">bericht</string>
+    <string name="Bericht">bericht, verslag</string>
     <string name="Museum">museum</string>
     <string name="Bau">bouw</string>
     <string name="Wirtschaft">economie</string>
@@ -673,7 +673,7 @@
     <string name="Engagement">verloving, verplichting</string>
     <string name="Brief">brief</string>
     <string name="Initiative">initiatief</string>
-    <string name="Nachricht">bericht</string>
+    <string name="Nachricht">bericht (nieuws)</string>
     <string name="Finale">finale</string>
     <string name="Richter">rechter</string>
     <string name="Winter">winter</string>
@@ -778,7 +778,7 @@
     <string name="Gegner">tegenstander</string>
     <string name="Vorstand">bestuur</string>
     <string name="Sprecher">spreker</string>
-    <string name="Institut">instituut</string>
+    <string name="Institut">instituut, instelling</string>
     <string name="Niederlage">nederlaag</string>
     <string name="Anmeldung">aanmelding, inschrijving</string>
     <string name="Auftrag">opdracht</string>
@@ -798,7 +798,7 @@
     <string name="Anteil">aandeel</string>
     <string name="Tat">daad</string>
     <string name="Nummer">nummer</string>
-    <string name="Rathaus">gemeentehuis</string>
+    <string name="Rathaus">raadhuis</string>
     <string name="Menge">hoeveelheid</string>
     <string name="Sekunde">seconde</string>
     <string name="Verbindung">verbinding</string>
@@ -845,7 +845,7 @@
     <string name="Weblink">weblink</string>
     <string name="Rahmen">raamkozijn, lijst</string>
     <string name="Verfügung">beschikking (verfügbar=beschikbaar)</string>
-    <string name="Partie">feest</string>
+    <string name="Partie">match (sport); uitstapje</string>
     <string name="Vertreter">vertegenwoordiger</string>
     <string name="Mittel">middel; mediaan</string>
     <string name="Rede">toespraak, speech</string>
@@ -1121,7 +1121,7 @@
     <string name="Organisator">organisator</string>
     <string name="Tal">dal</string>
     <string name="Sponsor">sponsor</string>
-    <string name="Militär">leger</string>
+    <string name="Militär">soldaat, militair</string>
     <string name="Gestaltung">vormgeving</string>
     <string name="Umfeld">omgeving</string>
     <string name="Fortschritt">voortgang</string>
@@ -1201,7 +1201,7 @@
     <string name="Seminar">seminarium, colloquium</string>
     <string name="Budget">budget</string>
     <string name="Laden">winkel</string>
-    <string name="Altstadt">binnenstad</string>
+    <string name="Altstadt">oudstad (binnenstad)</string>
     <string name="Bundespräsident">president (v.e. federatie)</string>
     <string name="Kapitel">kapitaal</string>
     <string name="Nationalmannschaft">nationaal team (sport)</string>
