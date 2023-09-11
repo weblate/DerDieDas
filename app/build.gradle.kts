@@ -9,7 +9,7 @@ plugins {
 android {
     namespace = "com.machiav3lli.derdiedas"
 
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.machiav3lli.derdiedas"
         minSdk = 24
