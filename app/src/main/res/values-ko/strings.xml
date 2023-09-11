@@ -1,2 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="Lebensjahr">인생의 1년</string>
+    <string name="theme_light">빛</string>
+    <string name="Prozent">확률</string>
+    <string name="rate">점수</string>
+    <string name="Platz">공간/장소</string>
+    <string name="theme_dark">어두운</string>
+    <string name="Woche">주간</string>
+    <string name="Frau">여자</string>
+    <string name="Mensch">인간</string>
+    <string name="practice">연습</string>
+    <string name="theme_system">시스템 테마</string>
+    <string name="fully_learned_words_all_words">완전히 학습된 단어들 / 모든 단어들:</string>
+    <string name="die">Die</string>
+    <string name="noun_placeholder">연방 경제부</string>
+    <string name="full_words_text">\"완전히 학습된 단어\"란 연속 5번 정답을 맞추면 됩니다. 그러면 \"완전히 학습된\" 것으로 간주되어 더 이상 연습 화면에 표시되지 않습니다. 궁극적인 목표는 모든 명사를 \"완전히 학습\"하는 것입니다.
+\n
+\n명사로 된 정답을 맞추었다가 연속 5회를 달성하기 전에 틀리면 다시 0으로 재설정되고 다시 연속 5회를 맞추는 과정이 시작됩니다.</string>
+    <string name="Jahr">연도 (시간)</string>
+    <string name="help">도움받기</string>
+    <string name="das">Das</string>
+    <string name="Leben">인생</string>
+    <string name="Zeit">시간</string>
+    <string name="Kind">아이</string>
+    <string name="Euro">Euro</string>
+    <string name="full_words_title">완전히 학습함</string>
+    <string name="Haus">집</string>
+    <string name="placeholder">123 / 456</string>
+    <string name="Uhr">시계</string>
+    <string name="prefs_theme">테마</string>
+    <string name="dialog_no">아니오</string>
+    <string name="Stadt">도시</string>
+    <string name="der">Der</string>
+    <string name="Tag">일자</string>
+    <string name="stats">학습 상황</string>
+    <string name="Mann">남자</string>
+    <string name="Million">백만</string>
+    <string name="dialog_yes">예</string>
+    <string name="Land">나라</string>
+    <string name="Sonntag">일요일</string>
+    <string name="Spiel">게임</string>
+    <string name="finished">모든 명사를 완전히 학습했습니다. 다시 시작하시겠습니까\?</string>
+    <string name="Mark">마크 (통화)</string>
+    <string name="prefs_language">언어</string>
+    <string name="settings">설정</string>
+    <string name="Seite">옆</string>
+    <string name="app_name">Der Die Das</string>
+    <string name="Vorjahr">이전 연도 (시간)</string>
+    <string name="Samstag">토요일</string>
+    <string name="share">공유하기</string>
+    <string name="Ende">종료</string>
+    <string name="Jahrgang">연도 (특정 연도의 그룹)</string>
+    <string name="prefs_language_system">시스템 기본값</string>
+</resources>
