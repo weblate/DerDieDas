@@ -41,11 +41,11 @@
         <item name="android:windowBackground">?dialogBackground</item>
     </style>
 
-    <style name="Button.Layout" parent="Widget.AppCompat.ActionButton">
+    <style name="Button.Layout" parent="Widget.Material3.Button.TonalButton">
         <item name="android:layout_margin">8dp</item>
     </style>
 
-    <style name="Button.Game" parent="Widget.AppCompat.ActionButton">
+    <style name="Button.Game" parent="Widget.Material3.Button.TonalButton">
         <item name="android:textSize">48sp</item>
         <item name="android:layout_margin">8dp</item>
     </style>

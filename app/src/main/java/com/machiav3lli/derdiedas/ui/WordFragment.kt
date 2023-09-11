@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
+import com.google.android.material.button.MaterialButton
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.data.Noun
 import com.machiav3lli.derdiedas.data.getUpdatedNounList
@@ -65,7 +65,7 @@ class WordFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        val pressedButton = view as AppCompatButton
+        val pressedButton = view as MaterialButton
         val pressedButtonGender = resources.getResourceEntryName(view.getId())
         if (pressedButtonGender == correctGender && firstClickBoolean) {
             updateList(true)
@@ -83,7 +83,7 @@ class WordFragment : Fragment(), View.OnClickListener {
         firstClickBoolean = false
     }
 
-    private fun getCorrectButton(correctGender: String?): AppCompatButton = when (correctGender) {
+    private fun getCorrectButton(correctGender: String?): MaterialButton = when (correctGender) {
         "f" -> binding.f
         "m" -> binding.m
         else -> binding.n
