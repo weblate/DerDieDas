@@ -12,14 +12,14 @@
     <string name="practice">연습하기</string>
     <string name="theme_system">기기 기본 설정을 사용</string>
     <string name="fully_learned_words_all_words">배운 단어 / 전체 단어:</string>
-    <string name="die">Die (여성)</string>
+    <string name="die">Die</string>
     <string name="noun_placeholder">연방 경제부</string>
     <string name="full_words_text">\"완전히 학습된 단어\"란 연속 5번 명사 정답을 맞추면 됩니다. 그러면 \"완전히 학습된\" 것으로 간주되어 더 이상 연습 화면에 표시되지 않습니다. 궁극적인 목표는 모든 명사를 \"완전히 학습\"하는 것입니다.
 \n
 \n명사로 된 정답을 맞추었다가 연속 5회를 달성하기 전에 틀리면 다시 0으로 재설정되고 다시 연속 5회를 맞추는 과정이 시작됩니다.</string>
     <string name="Jahr">연도 (시간)</string>
     <string name="help">도움받기</string>
-    <string name="das">Das (중성)</string>
+    <string name="das">Das</string>
     <string name="Leben">인생</string>
     <string name="Zeit">시간</string>
     <string name="Kind">아이</string>
@@ -31,7 +31,7 @@
     <string name="prefs_theme">화면 설정</string>
     <string name="dialog_no">아니오</string>
     <string name="Stadt">도시</string>
-    <string name="der">Der (남성)</string>
+    <string name="der">Der</string>
     <string name="Tag">일자</string>
     <string name="stats">나의 학습 상황은</string>
     <string name="Mann">남자</string>
