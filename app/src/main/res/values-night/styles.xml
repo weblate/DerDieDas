@@ -35,10 +35,10 @@
         <item name="colorPrimaryInverse">@color/md_theme_inversePrimary</item>
     </style>
 
-    <style name="AlertDialogCustom" parent="Theme.MaterialComponents.Dialog.Alert">
-        <item name="colorPrimary">@color/app_accent_dark</item>
-        <item name="colorSecondary">@color/app_secondary_dark</item>
-        <item name="android:windowBackground">?dialogBackground</item>
+    <style name="AlertDialogCustom" parent="Theme.Material3.Dark.Dialog.Alert">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorTertiary">@color/md_theme_tertiary</item>
     </style>
 
     <style name="Button.Layout" parent="Widget.Material3.Button.TonalButton">
