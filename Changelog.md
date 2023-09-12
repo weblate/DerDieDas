@@ -1,10 +1,16 @@
 changelog
 =========
+2.2.0 (12.09.2023)
+------------------
+* Add: Translations 1201→1300
+* Update: Material 3 design
+* Update CompileSDK 34
+* 10+ translations
+
 2.1.1 (26.02.2023)
 ------------------
 * Add: Show right article beside word after clicking
 * Add: New icon
-* Update TargetSDK 33
 * 40+ translation contributions
 
 2.1.0 (12.05.2022)

@@ -1,0 +1,4 @@
+Add: Translations 1201→1300
+Update: Material 3 design
+Update CompileSDK 34
+10+ translations
