@@ -4,21 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
+        style="@style/Widget.Material3.Button.IconButton.Outlined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start|top"
         android:layout_margin="8dp"
-        android:background="@drawable/button_normal"
-        android:elevation="2dp">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription=""
-            app:srcCompat="@drawable/ic_round_arrow_back_32" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        app:icon="@drawable/ic_round_arrow_back_32"
+        app:iconTint="@color/md_theme_outline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
