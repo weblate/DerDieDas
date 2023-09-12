@@ -1,19 +1,30 @@
 package com.machiav3lli.derdiedas.utils
 
 import android.content.Context
-import android.graphics.drawable.AnimationDrawable
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import androidx.appcompat.widget.AppCompatButton
+import com.google.android.material.button.MaterialButton
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.ui.WordActivity
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 object AnimationUtil {
-    fun animateButtonDrawable(button: AppCompatButton) {
-        button.setBackgroundResource(R.drawable.button_animation_correct)
-        val buttonAnimation = button.background as AnimationDrawable
-        buttonAnimation.start()
+    fun animateButtonDrawable(button: MaterialButton) {
+        val context = button.context
+        GlobalScope.launch {
+            repeat(4) {
+                button.backgroundTintList = context.getColorStateList(R.color.md_theme_primary)
+                button.setTextColor(context.getColorStateList(R.color.md_theme_onPrimary))
+                delay(300)
+                button.backgroundTintList =
+                    context.getColorStateList(R.color.md_theme_secondaryContainer)
+                button.setTextColor(context.getColorStateList(R.color.md_theme_onSecondaryContainer))
+                delay(300)
+            }
+        }
     }
 
     fun View.animateJumpAndSlide(context: Context, isCorrectAnswer: Boolean) {
