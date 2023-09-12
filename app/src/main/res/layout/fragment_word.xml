@@ -23,7 +23,6 @@
             android:maxLines="1"
             android:paddingHorizontal="10dp"
             android:text="@string/noun_placeholder"
-            android:textColor="?buttonTextNormal"
             android:textSize="48sp"
             app:autoSizeTextType="uniform" />
 
@@ -59,9 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/buttonDrawable"
-            android:text="@string/der"
-            android:textColor="@drawable/selectors_text_color" />
+            android:text="@string/der" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/f"
@@ -69,9 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/buttonDrawable"
-            android:text="@string/die"
-            android:textColor="@drawable/selectors_text_color" />
+            android:text="@string/die" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/n"
@@ -79,8 +74,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/buttonDrawable"
-            android:text="@string/das"
-            android:textColor="@drawable/selectors_text_color" />
+            android:text="@string/das" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

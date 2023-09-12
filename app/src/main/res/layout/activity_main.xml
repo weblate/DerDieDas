@@ -10,25 +10,19 @@
         style="@style/Button.Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/buttonDrawable"
-        android:text="@string/practice"
-        android:textColor="@drawable/selectors_text_color" />
+        android:text="@string/practice" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/stats"
         style="@style/Button.Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/buttonDrawable"
-        android:text="@string/stats"
-        android:textColor="@drawable/selectors_text_color" />
+        android:text="@string/stats" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/settings"
         style="@style/Button.Layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/buttonDrawable"
-        android:text="@string/settings"
-        android:textColor="@drawable/selectors_text_color" />
+        android:text="@string/settings" />
 </androidx.appcompat.widget.LinearLayoutCompat>
