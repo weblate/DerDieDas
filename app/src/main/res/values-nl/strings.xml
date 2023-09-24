@@ -132,7 +132,7 @@
     <string name="System">systeem</string>
     <string name="Jugend">jeugd</string>
     <string name="Besuch">bezoek</string>
-    <string name="Begriff">begrip</string>
+    <string name="Begriff">begrip, term</string>
     <string name="Gott">god</string>
     <string name="Info">informatie</string>
     <string name="Sicherheit">zekerheid</string>
@@ -758,7 +758,7 @@
     <string name="Religion">religie</string>
     <string name="noun_placeholder">Ministerie van Economie</string>
     <string name="Friedhof">kerkhof</string>
-    <string name="Flucht">vlucht</string>
+    <string name="Flucht">vlucht, ontsnapping</string>
     <string name="Motiv">motief</string>
     <string name="Lust">lust</string>
     <string name="Autobahn">snelweg</string>
@@ -1025,7 +1025,7 @@
     <string name="Auftakt">opening (bijv. v.e. muziekstuk)</string>
     <string name="Gründung">oprichting; fundering</string>
     <string name="Argument">argument</string>
-    <string name="Bezeichnung">beschrijving</string>
+    <string name="Bezeichnung">beschrijving, markering</string>
     <string name="Zweck">doel, doeleinde</string>
     <string name="Umfrage">enquête, opiniepijling</string>
     <string name="Verhalten">gedrag, houding</string>
@@ -1105,7 +1105,7 @@
     <string name="Fusion">fusie</string>
     <string name="Gesang">gezang</string>
     <string name="Dutzend">dozijn</string>
-    <string name="Flug">vlucht</string>
+    <string name="Flug">vlucht, vliegreis</string>
     <string name="Autorin">auteur, schrijfster</string>
     <string name="Öl">olie</string>
     <string name="Betreuung">zorg, verzorging</string>
