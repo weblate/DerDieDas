@@ -200,7 +200,7 @@
     <string name="Pause">השהיה</string>
     <string name="Unterschied">הבדל</string>
     <string name="Beruf">עיסוק</string>
-    <string name="Termin"></string>
+    <string name="Termin"/>
     <string name="Vertrag">חוזה</string>
     <string name="Dame">גברת</string>
     <string name="Organisation">ארגון</string>
@@ -357,4 +357,6 @@
     <string name="Tier">חיה</string>
     <string name="Koalition">קואליציה (יחדה)</string>
     <string name="Schritt">צעד</string>
+    <string name="Opfer">קורבן</string>
+    <string name="Quelle">מקור/מעיין</string>
 </resources>
