@@ -7,14 +7,15 @@ import android.view.animation.AnimationUtils
 import com.google.android.material.button.MaterialButton
 import com.machiav3lli.derdiedas.R
 import com.machiav3lli.derdiedas.ui.WordActivity
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 object AnimationUtil {
     fun animateButtonDrawable(button: MaterialButton) {
         val context = button.context
-        GlobalScope.launch {
+        CoroutineScope(Dispatchers.IO).launch {
             repeat(4) {
                 button.backgroundTintList = context.getColorStateList(R.color.md_theme_primary)
                 button.setTextColor(context.getColorStateList(R.color.md_theme_onPrimary))
