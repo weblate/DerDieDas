@@ -5,8 +5,13 @@ plugins {
     kotlin("android")
     id("com.google.devtools.ksp") version ("1.9.10-1.0.13")
 }
+
 val vKotlin = "1.9.10"
 val vKSP = "1.0.13"
+val vLifecycle = "2.6.2"
+val vMaterial = "1.10.0"
+val vPreference = "1.2.1"
+val vRoom = "2.6.0-rc01"
 
 android {
     namespace = "com.machiav3lli.derdiedas"
@@ -60,16 +65,16 @@ android {
 dependencies {
     implementation(kotlin("stdlib", vKotlin))
     implementation("com.google.devtools.ksp:symbol-processing-api:$vKotlin-$vKSP")
+
     //Libs
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.room:room-runtime:2.5.2")
-    implementation("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.room:room-runtime:$vRoom")
+    implementation("androidx.room:room-ktx:$vRoom")
+    ksp("androidx.room:room-compiler:$vRoom")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$vLifecycle")
 
     // UI
-    implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.preference:preference-ktx:$vPreference")
+    implementation("com.google.android.material:material:$vMaterial")
 
     // Test
     implementation("androidx.test.ext:junit:1.1.5")
