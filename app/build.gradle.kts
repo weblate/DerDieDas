@@ -3,8 +3,10 @@ import com.android.build.gradle.internal.tasks.factory.dependsOn
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("kapt")
+    id("com.google.devtools.ksp") version ("1.9.10-1.0.13")
 }
+val vKotlin = "1.9.10"
+val vKSP = "1.0.13"
 
 android {
     namespace = "com.machiav3lli.derdiedas"
@@ -18,6 +20,15 @@ android {
         versionName = "2.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                ksp {
+                    arg("room.schemaLocation", "$projectDir/schemas")
+                    arg("room.incremental", "true")
+                }
+            }
+        }
     }
 
     buildTypes {
@@ -47,7 +58,8 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.10")
+    implementation(kotlin("stdlib", vKotlin))
+    implementation("com.google.devtools.ksp:symbol-processing-api:$vKotlin-$vKSP")
     //Libs
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.room:room-runtime:2.5.2")
