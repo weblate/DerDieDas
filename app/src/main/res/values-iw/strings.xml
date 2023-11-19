@@ -360,4 +360,19 @@
     <string name="Opfer">קורבן</string>
     <string name="Quelle">מקור/מעיין</string>
     <string name="Behörde">רשות</string>
+    <string name="Band">רצועה/להקה</string>
+    <string name="Firma">חברה</string>
+    <string name="Ort">מקום</string>
+    <string name="Werk">מפעל(תעשייתי)/עבודה/יצירה</string>
+    <string name="Präsident">נשיא</string>
+    <string name="Gast">אורח</string>
+    <string name="Trainer">מאמן</string>
+    <string name="Staat">מצב/מדינה</string>
+    <string name="Film">סרט</string>
+    <string name="Stelle">תפקיד</string>
+    <string name="Spieler">שחקן</string>
+    <string name="Person">אדם</string>
+    <string name="Schüler">תלמיד</string>
+    <string name="Bürgermeister">ראש עיר</string>
+    <string name="Titel">כותרת</string>
 </resources>
