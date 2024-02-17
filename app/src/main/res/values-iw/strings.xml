@@ -375,4 +375,7 @@
     <string name="Schüler">תלמיד</string>
     <string name="Bürgermeister">ראש עיר</string>
     <string name="Titel">כותרת</string>
+    <string name="Klasse">רמה/שיעור</string>
+    <string name="Lage"></string>
+    <string name="Bank">בנק/ספסל</string>
 </resources>
