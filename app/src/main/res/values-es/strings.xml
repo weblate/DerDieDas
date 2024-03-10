@@ -1174,4 +1174,6 @@
     <string name="Angelegenheit">Asunto</string>
     <string name="Lokal">Local</string>
     <string name="Heilige">Santo</string>
+    <string name="Verbot">Prohibición</string>
+    <string name="Verbrechen">Crimen/delito</string>
 </resources>
