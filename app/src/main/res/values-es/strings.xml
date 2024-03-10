@@ -1172,7 +1172,7 @@
     <string name="Blume">Flor</string>
     <string name="Erlebnis">experiencia</string>
     <string name="Angelegenheit">Asunto</string>
-    <string name="Lokal">Local</string>
+    <string name="Lokal">Local/Pub</string>
     <string name="Heilige">Santo</string>
     <string name="Verbot">Prohibición</string>
     <string name="Verbrechen">Crimen/delito</string>
@@ -1224,4 +1224,8 @@
     <string name="Budget">Presupuesto</string>
     <string name="Laden">Tienda</string>
     <string name="Absicht">Intención</string>
+    <string name="Hektar">Hectárea</string>
+    <string name="Halbfinale">Semifinal</string>
+    <string name="Jury">Jurado</string>
+    <string name="Zeitraum">Período/Era</string>
 </resources>
