@@ -182,7 +182,7 @@
     <string name="Verlag">Editorial</string>
     <string name="Plan">Plan</string>
     <string name="Bund">Asociación, unión</string>
-    <string name="Tier">Animal</string>
+    <string name="Tier">animal</string>
     <string name="Theater">Teatro</string>
     <string name="Schritt">Paso</string>
     <string name="Gebiet">Área, región</string>
@@ -522,7 +522,7 @@
     <string name="Minister">Ministro</string>
     <string name="Erklärung">Explicación</string>
     <string name="Zustand">Estado, condición, situación</string>
-    <string name="Nachmittag">Tarde</string>
+    <string name="Nachmittag">tarde</string>
     <string name="Sekunde">Segundo</string>
     <string name="Kandidat">Candidato</string>
     <string name="Vorwurf">Reproche, recriminación</string>
@@ -753,7 +753,7 @@
     <string name="Premiere">Estreno</string>
     <string name="Erwachsene">Adulto</string>
     <string name="Maschine">Máquina</string>
-    <string name="Opposition">Oposición</string>
+    <string name="Opposition">oOposición</string>
     <string name="Investition">Inversión</string>
     <string name="Westen">Occidente, oeste</string>
     <string name="Beschluss">Acuerdo</string>
@@ -767,7 +767,7 @@
     <string name="Auszeichnung">Distinción, premio</string>
     <string name="Nord">Norte</string>
     <string name="Parkplatz">Aparcamiento, playa de estacionamiento</string>
-    <string name="Forschung">Investigación</string>
+    <string name="Forschung">investigación</string>
     <string name="Regelung">Regulación, reglamentación</string>
     <string name="Ost">Este</string>
     <string name="Gastgeber">Anfitrión</string>
@@ -823,7 +823,7 @@
     <string name="Zimmer">Cuarto, sala, habitación</string>
     <string name="Neubau">Edificio nuevo, construcción nueva</string>
     <string name="Wissenschaftler">Científico</string>
-    <string name="Service">Servicio</string>
+    <string name="Service">servicio</string>
     <string name="Spiegel">Espejo</string>
     <string name="Profi">Profesional, experto</string>
     <string name="Keller">Sótano, bodega</string>
@@ -1175,7 +1175,7 @@
     <string name="Lokal">Local/Pub</string>
     <string name="Heilige">Santo</string>
     <string name="Verbot">Prohibición</string>
-    <string name="Verbrechen">Crimen/delito</string>
+    <string name="Verbrechen">Crimen, delito</string>
     <string name="Ecke">Rincón, córner</string>
     <string name="Gewicht">Peso</string>
     <string name="Äußerung">declaración</string>
@@ -1200,11 +1200,11 @@
     <string name="Hafen">Puerto</string>
     <string name="Verbraucher">Consumidor</string>
     <string name="Arbeitsmarkt">Mercado laboral</string>
-    <string name="Klang">Tono/Sonido</string>
+    <string name="Klang">Sonido, timbre</string>
     <string name="Gebühr">Tasa</string>
     <string name="Musical">Musical</string>
     <string name="Leiche">Cadáver</string>
-    <string name="Villa">villa</string>
+    <string name="Villa">Mansión, villa</string>
     <string name="Bremer">Nativo de Bremen</string>
     <string name="Mischung">Mezcla</string>
     <string name="Bürgerhaus">Centro comunal</string>
@@ -1225,7 +1225,7 @@
     <string name="Laden">Tienda</string>
     <string name="Absicht">Intención</string>
     <string name="Hektar">Hectárea</string>
-    <string name="Halbfinale">Semifinal</string>
+    <string name="Halbfinale">semifinal</string>
     <string name="Jury">Jurado</string>
     <string name="Zeitraum">Período/Era</string>
     <string name="Inszenierung">Representación, montaje</string>
