@@ -376,6 +376,8 @@
     <string name="Bürgermeister">ראש עיר</string>
     <string name="Titel">כותרת</string>
     <string name="Klasse">רמה/שיעור</string>
-    <string name="Lage"></string>
+    <string name="Lage"/>
     <string name="Bank">בנק/ספסל</string>
+    <string name="Raum">מרחב/חדר</string>
+    <string name="Situation">סיטואציה</string>
 </resources>
