@@ -495,4 +495,19 @@
     <string name="Ausgleich">Tasandus/kompenseerimine/lepitamine/hüvitus</string>
     <string name="Ausland">Välismaa/välisriigid</string>
     <string name="Anforderung">Nõue/vajadus/nõudmine/väljanõudmine</string>
+    <string name="Berg">Mägi</string>
+    <string name="Beruf">Elukutse</string>
+    <string name="Bein">Jalg</string>
+    <string name="Beschluss">Otsus</string>
+    <string name="Beratung">Nõupidamine/konsultatsioon</string>
+    <string name="Behandlung">Kohtlemine/käitlemine/ravi</string>
+    <string name="Benutzer">Kasutaja</string>
+    <string name="Besitzer">Valdaja/omanik</string>
+    <string name="Besitz">Valdus/omand</string>
+    <string name="Belastung">Koormus/koorem</string>
+    <string name="Beleg">Tõend/tõestus</string>
+    <string name="Beschreibung">Kirjeldus</string>
+    <string name="Beschäftigter">Töötaja/töövõtja</string>
+    <string name="Berufung">Kutse/kokkukutsumine</string>
+    <string name="Bestand">Vara/varu/olemasolu</string>
 </resources>
