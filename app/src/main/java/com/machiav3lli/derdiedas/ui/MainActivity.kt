@@ -1,12 +1,16 @@
 package com.machiav3lli.derdiedas.ui
 
-import android.content.Intent
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.ui.Modifier
 import androidx.preference.PreferenceManager
 import com.machiav3lli.derdiedas.data.NounDatabase
 import com.machiav3lli.derdiedas.data.WordViewModel
-import com.machiav3lli.derdiedas.databinding.ActivityMainBinding
+import com.machiav3lli.derdiedas.ui.theme.AppTheme
 import com.machiav3lli.derdiedas.utils.appTheme
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
 import kotlinx.coroutines.runBlocking
@@ -14,13 +18,10 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
 class MainActivity : BaseActivity() {
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         setDayNightTheme(appTheme)
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         if (prefs.getBoolean("firstrun", true)) {
             NounDatabase.getInstance(this).let {
@@ -31,22 +32,16 @@ class MainActivity : BaseActivity() {
             }
             prefs.edit().putBoolean("firstrun", false).apply()
         }
-    }
 
-    override fun onStart() {
-        super.onStart()
-        setupOnClicks()
-    }
-
-    private fun setupOnClicks() {
-        binding.practice.setOnClickListener {
-            startActivity(Intent(baseContext, WordActivity::class.java))
-        }
-        binding.stats.setOnClickListener {
-            startActivity(Intent(baseContext, StatsActivity::class.java))
-        }
-        binding.settings.setOnClickListener {
-            startActivity(Intent(baseContext, SettingsActivity::class.java))
+        setContent {
+            AppTheme {
+                Scaffold(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainerLowest,
+                    contentColor = MaterialTheme.colorScheme.onBackground,
+                ) {
+                    MainScreen(Modifier.padding(it))
+                }
+            }
         }
     }
 
