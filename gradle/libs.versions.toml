@@ -2,6 +2,8 @@
 agp = "8.13.2"
 compose-bom = "2026.01.00"
 coroutines = "1.10.2"
+koin = "4.1.1"
+koin-ksp = "2.3.1"
 kotlin = "2.3.0"
 ksp = "2.3.4"
 lifecycle = "2.10.0"
@@ -23,6 +25,13 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core" }
+koin-android = { group = "io.insert-koin", name = "koin-android" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose" }
+koin-startup = { group = "io.insert-koin", name = "koin-androidx-startup" }
+koin-annotations = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koin-ksp" }
+koin-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-ksp" }
 
 androidx-preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preference" }
 material = { module = "com.google.android.material:material", version.ref = "material" }

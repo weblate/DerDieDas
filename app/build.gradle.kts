@@ -75,6 +75,15 @@ dependencies {
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
 
+    // Koin
+    api(platform(libs.koin.bom))
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.startup)
+    implementation(libs.koin.annotations)
+    ksp(libs.koin.compiler)
+
     // UI
     implementation(libs.androidx.preference.ktx)
     implementation(libs.material)
