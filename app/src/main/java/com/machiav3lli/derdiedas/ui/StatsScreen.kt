@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -56,11 +54,11 @@ fun StatsScreen(onBackPressed: () -> Unit) {
             TopAppBar(
                 title = {},
                 navigationIcon = {
-                    IconButton(onClick = onBackPressed) {
-                        Icon(
-                            imageVector = Phosphor.ArrowCircleLeft,
-                            contentDescription = stringResource(R.string.dialog_back)
-                        )
+                    RoundButton(
+                        icon = Phosphor.ArrowCircleLeft,
+                        description = stringResource(R.string.dialog_back),
+                    ) {
+                        onBackPressed()
                     }
                 }
             )
@@ -87,12 +85,11 @@ fun StatsScreen(onBackPressed: () -> Unit) {
                     style = MaterialTheme.typography.titleLarge,
                 )
 
-                IconButton(onClick = { showDialog = true }) {
-                    Icon(
-                        imageVector = Phosphor.CircleWavyQuestion,
-                        contentDescription = stringResource(R.string.help),
-                        tint = MaterialTheme.colorScheme.onSurface
-                    )
+                RoundButton(
+                    icon = Phosphor.CircleWavyQuestion,
+                    description = stringResource(R.string.help),
+                ) {
+                    showDialog = true
                 }
             }
         }

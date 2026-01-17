@@ -5,6 +5,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -15,6 +18,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 
@@ -37,6 +41,26 @@ fun ActionButton(
         Text(
             text = text,
             style = MaterialTheme.typography.titleLarge
+        )
+    }
+}
+
+@Composable
+fun RoundButton(
+    modifier: Modifier = Modifier,
+    icon: ImageVector,
+    description: String = "",
+    onClick: () -> Unit,
+) {
+    IconButton(
+        modifier = modifier,
+        colors = IconButtonDefaults.iconButtonColors(),
+        shape = MaterialTheme.shapes.medium,
+        onClick = onClick
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = description
         )
     }
 }
