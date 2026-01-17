@@ -13,7 +13,7 @@ class WordActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val nounDao = NounDatabase.getInstance(this).nounDao
-        val viewModelFactory = WordViewModel.Factory(nounDao, application)
+        val viewModelFactory = WordViewModel.Factory(nounDao)
         viewModel = ViewModelProvider(this, viewModelFactory)[WordViewModel::class.java]
 
         setContent {

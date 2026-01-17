@@ -16,8 +16,7 @@ import kotlinx.coroutines.launch
 import kotlin.math.max
 
 @OptIn(ExperimentalCoroutinesApi::class)
-class WordViewModel(private val nounDao: NounDao, application: Application) :
-    AndroidViewModel(application) {
+class WordViewModel(private val nounDao: NounDao) : ViewModel() {
 
     val pending: StateFlow<Int>
         field = MutableStateFlow(0)
@@ -118,12 +117,11 @@ class WordViewModel(private val nounDao: NounDao, application: Application) :
 
     class Factory(
         private val database: NounDao,
-        private val application: Application
     ) : ViewModelProvider.Factory {
         @Suppress("unchecked_cast")
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(WordViewModel::class.java)) {
-                return WordViewModel(database, application) as T
+                return WordViewModel(database) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
         }
