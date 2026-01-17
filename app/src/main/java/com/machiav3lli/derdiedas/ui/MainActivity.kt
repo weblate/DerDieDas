@@ -5,10 +5,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import com.machiav3lli.derdiedas.data.NounDatabase
+import com.machiav3lli.derdiedas.data.WordViewModel
 import com.machiav3lli.derdiedas.databinding.ActivityMainBinding
 import com.machiav3lli.derdiedas.utils.appTheme
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
 import kotlinx.coroutines.runBlocking
+import org.koin.core.module.dsl.singleOf
+import org.koin.dsl.module
 
 class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -54,4 +57,8 @@ class MainActivity : BaseActivity() {
             else -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
     }
+}
+
+val viewModelsModule = module {
+    singleOf(::WordViewModel)
 }

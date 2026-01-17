@@ -6,6 +6,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.machiav3lli.derdiedas.NOUN_DB_NAME
+import org.koin.dsl.module
 
 @Database(
     entities = [Noun::class],
@@ -41,4 +42,12 @@ abstract class NounDatabase : RoomDatabase() {
             }
         }
     }
+}
+
+
+val databaseModule = module {
+    single {
+        NounDatabase.getInstance(get())
+    }
+    single { get<NounDatabase>().nounDao }
 }
