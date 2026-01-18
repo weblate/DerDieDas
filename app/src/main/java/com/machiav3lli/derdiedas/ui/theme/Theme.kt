@@ -1,6 +1,9 @@
 package com.machiav3lli.derdiedas.ui.theme
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Build
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -12,7 +15,8 @@ import androidx.compose.ui.platform.LocalContext
 
 @Composable
 fun AppTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = isNightMode(),
+    // TODO add dynamic theming options
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
@@ -31,6 +35,16 @@ fun AppTheme(
         content = content
     )
 }
+
+@Composable
+fun isNightMode(): Boolean = when (AppCompatDelegate.getDefaultNightMode()) {
+    AppCompatDelegate.MODE_NIGHT_YES -> true
+    AppCompatDelegate.MODE_NIGHT_NO -> false
+    else -> isSystemInDarkTheme()
+}
+
+fun Context.isNightMode() =
+    resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
