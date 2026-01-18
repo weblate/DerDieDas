@@ -1,4 +1,6 @@
+import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 import org.jetbrains.kotlin.gradle.dsl.kotlinExtension
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     alias(libs.plugins.android.application)
@@ -28,7 +30,15 @@ android {
         versionName = "2.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String[]", "DETECTED_LOCALES", langsListString)
+        androidResources.localeFilters.addAll(detectedLocales)
+    }
+
+    applicationVariants.all {
+        val variant = this
+        outputs.all {
+            (this as BaseVariantOutputImpl).outputFileName =
+                "DerDieDas_${variant.versionName}_${variant.buildType.name}.apk"
+        }
     }
 
     buildTypes {
@@ -59,6 +69,22 @@ android {
     packaging {
         kotlinExtension.sourceSets.all {
             languageSettings.enableLanguageFeature("ExplicitBackingFields")
+        }
+    }
+
+    val generateLocales by tasks.registering(GenerateLocalesTask::class) {
+        resDir.set(project.layout.projectDirectory.dir("src/main/res"))
+        outputDir.set(project.layout.buildDirectory.dir("generated/source/locales/kotlin/main"))
+    }
+
+    androidComponents.onVariants { variant ->
+        variant.sources.kotlin!!.addGeneratedSourceDirectory(
+            generateLocales,
+            GenerateLocalesTask::outputDir
+        )
+
+        tasks.withType<KotlinCompile> {
+            dependsOn(generateLocales)
         }
     }
 }
@@ -115,4 +141,49 @@ fun detectLocales(): Set<String> {
         }
     }
     return langsList
+}
+
+abstract class GenerateLocalesTask : DefaultTask() {
+    @get:InputFiles
+    @get:PathSensitive(PathSensitivity.RELATIVE)
+    @get:IgnoreEmptyDirectories
+    abstract val resDir: DirectoryProperty
+
+    @get:OutputDirectory
+    abstract val outputDir: DirectoryProperty
+
+    init {
+        group = "build"
+        description = "Generates DetectedLocales.kt from res directories"
+    }
+
+    @TaskAction
+    fun generate() {
+        val detectedLocales = mutableSetOf<String>()
+        resDir.get().asFileTree.visit {
+            if (file.isFile && file.name == "strings.xml" && file.readText().contains("<string")) {
+                val languageCode = file.parentFile?.name?.removePrefix("values-")?.let {
+                    if (it == "values") "en" else it
+                }
+                languageCode?.let { detectedLocales.add(it) }
+            }
+        }
+
+        val outputFile =
+            outputDir.file("com/machiav3lli/derdiedas/locales/DetectedLocales.kt").get().asFile
+        outputFile.parentFile.mkdirs()
+        outputFile.writeText(
+            """
+            package com.machiav3lli.derdiedas.locales
+            
+            object DetectedLocales {
+                val ALL: Array<String> = arrayOf(${
+                detectedLocales.sorted().joinToString { "\"$it\"" }
+            })
+            }
+        """.trimIndent()
+        )
+
+        println("Generated locales to ${outputFile.absolutePath}: ${detectedLocales.size} languages")
+    }
 }

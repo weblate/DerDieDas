@@ -3,9 +3,9 @@ package com.machiav3lli.derdiedas.utils
 import android.content.Context
 import android.util.AttributeSet
 import androidx.preference.ListPreference
-import com.machiav3lli.derdiedas.BuildConfig
 import com.machiav3lli.derdiedas.PREFS_LANG_SYSTEM
 import com.machiav3lli.derdiedas.R
+import com.machiav3lli.derdiedas.locales.DetectedLocales
 
 class LanguagePref(context: Context, attrs: AttributeSet?) : ListPreference(context, attrs) {
 
@@ -17,7 +17,7 @@ class LanguagePref(context: Context, attrs: AttributeSet?) : ListPreference(cont
         setDefaultValue(PREFS_LANG_SYSTEM)
 
         val locales: MutableList<String> = ArrayList()
-        val languagesRaw = BuildConfig.DETECTED_LOCALES.sorted()
+        val languagesRaw = DetectedLocales.ALL.toSet()
         for (localeCode in languagesRaw) {
             val locale = context.getLocaleOfCode(localeCode)
             locales.add("${locale.translate()};$localeCode")
