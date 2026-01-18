@@ -4,17 +4,19 @@ import android.os.Bundle
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.navigation3.runtime.NavBackStack
+import androidx.navigation3.runtime.rememberNavBackStack
 import com.machiav3lli.derdiedas.data.AppPrefs
 import com.machiav3lli.derdiedas.data.NounDao
 import com.machiav3lli.derdiedas.data.Themes
 import com.machiav3lli.derdiedas.data.WordViewModel
+import com.machiav3lli.derdiedas.ui.navigation.AppNavDisplay
+import com.machiav3lli.derdiedas.ui.navigation.NavRoute
 import com.machiav3lli.derdiedas.ui.theme.AppTheme
 import com.machiav3lli.derdiedas.ui.theme.isNightMode
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
@@ -60,12 +62,12 @@ class MainActivity : BaseActivity() {
             }
 
             AppTheme {
-                Scaffold(
-                    containerColor = MaterialTheme.colorScheme.surfaceContainerLowest,
-                    contentColor = MaterialTheme.colorScheme.onBackground,
-                ) {
-                    MainScreen(Modifier.padding(it))
-                }
+                val navStack = rememberNavBackStack(NavRoute.Main) as NavBackStack<NavRoute>
+
+                AppNavDisplay(
+                    backStack = navStack,
+                    modifier = Modifier.imePadding(),
+                )
             }
         }
     }

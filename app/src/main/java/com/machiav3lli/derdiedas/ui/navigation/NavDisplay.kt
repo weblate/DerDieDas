@@ -38,7 +38,9 @@ fun AppNavDisplay(
         },
         entryProvider = entryProvider {
             slideInEntry<NavRoute.Main> { key ->
-                MainScreen()
+                MainScreen {
+                    backStack.navigateUnique(it)
+                }
             }
             slideInEntry<NavRoute.Word> { key ->
                 WordScreen {
@@ -77,4 +79,11 @@ inline fun <reified K : NavRoute> EntryProviderScope<NavRoute>.slideInEntry(
     ) {
         content(it)
     }
+}
+
+fun MutableList<NavRoute>.navigateUnique(key: NavRoute) {
+    val lastKey = lastOrNull()
+    if (lastKey != null && lastKey == key) return
+    removeAll { existing -> existing::class == key::class }
+    add(key)
 }
