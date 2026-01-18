@@ -6,8 +6,10 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.content.res.Configuration
 import com.machiav3lli.derdiedas.PREFS_LANG_SYSTEM
+import com.machiav3lli.derdiedas.data.AppPrefs
 import com.machiav3lli.derdiedas.ui.MainActivity
-import java.util.*
+import org.koin.java.KoinJavaComponent.get
+import java.util.Locale
 
 fun Context.restartApp() = startActivity(
     Intent.makeRestartActivityTask(
@@ -21,7 +23,8 @@ fun Context.wrap(): ContextWrapper {
 }
 
 fun Context.setLanguage(): Configuration {
-    var setLocalCode = language
+    val prefs: AppPrefs = get(AppPrefs::class.java)
+    var setLocalCode = prefs.appLanguage.value
     if (setLocalCode == PREFS_LANG_SYSTEM) {
         setLocalCode = Locale.getDefault().toString()
     }

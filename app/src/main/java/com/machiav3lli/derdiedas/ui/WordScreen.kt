@@ -1,5 +1,6 @@
 package com.machiav3lli.derdiedas.ui
 
+import android.R.attr.maxWidth
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -43,12 +44,13 @@ import com.machiav3lli.derdiedas.data.WordViewModel
 import com.machiav3lli.derdiedas.ui.icons.Phosphor
 import com.machiav3lli.derdiedas.ui.icons.phosphor.ArrowCircleLeft
 import com.machiav3lli.derdiedas.utils.createNounListFromAsset
+import com.machiav3lli.derdiedas.utils.extension.koinAppViewModel
 import com.machiav3lli.derdiedas.utils.getStringByName
 import kotlinx.coroutines.delay
 
 @Composable
 fun WordScreen(
-    viewModel: WordViewModel,
+    viewModel: WordViewModel = koinAppViewModel(),
     onBack: () -> Unit
 ) {
     val context = LocalContext.current

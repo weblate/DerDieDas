@@ -2,8 +2,6 @@ package com.machiav3lli.derdiedas.ui
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import com.machiav3lli.derdiedas.ui.theme.AppTheme
 
 class StatsActivity : BaseActivity() {

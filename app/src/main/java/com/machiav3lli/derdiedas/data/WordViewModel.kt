@@ -1,9 +1,6 @@
 package com.machiav3lli.derdiedas.data
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -112,18 +109,6 @@ class WordViewModel(private val nounDao: NounDao) : ViewModel() {
             }
 
             updateCounts()
-        }
-    }
-
-    class Factory(
-        private val database: NounDao,
-    ) : ViewModelProvider.Factory {
-        @Suppress("unchecked_cast")
-        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(WordViewModel::class.java)) {
-                return WordViewModel(database) as T
-            }
-            throw IllegalArgumentException("Unknown ViewModel class")
         }
     }
 }
