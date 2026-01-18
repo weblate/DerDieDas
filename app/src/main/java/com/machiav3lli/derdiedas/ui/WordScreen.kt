@@ -1,6 +1,5 @@
 package com.machiav3lli.derdiedas.ui
 
-import android.R.attr.maxWidth
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
