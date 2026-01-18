@@ -86,6 +86,7 @@ dependencies {
 
     // UI
     implementation(libs.androidx.preference.ktx)
+    implementation(libs.datastore.preferences)
     implementation(libs.material)
     api(platform(libs.compose.bom))
     implementation(libs.compose.runtime)
