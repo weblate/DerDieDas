@@ -1,0 +1,6 @@
+Add: Translations 1301→3300
+Add: State indicator bar
+Add: Predictive back animation
+Update: Migrate the app to jetpack Compose
+Update: Adaptive word page layout
+50+ translations

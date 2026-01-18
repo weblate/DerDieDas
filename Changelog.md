@@ -1,5 +1,16 @@
 changelog
 =========
+3.0.0 (18.01.2026)
+------------------
+* Add: Translations 1301→3300
+* Add: State indicator bar
+* Add: Predictive back animation
+* Update: Migrate the app to jetpack Compose
+* Update: Adaptive word page layout
+* CompileSDK 36
+* TargetSDK 36
+* 50+ translations
+
 2.2.0 (12.09.2023)
 ------------------
 * Add: Translations 1201→1300
