@@ -1,6 +1,7 @@
 package com.machiav3lli.derdiedas
 
 import android.app.Application
+import com.machiav3lli.derdiedas.data.AppPrefs.Companion.prefsModule
 import com.machiav3lli.derdiedas.data.databaseModule
 import com.machiav3lli.derdiedas.ui.viewModelsModule
 import org.koin.android.ext.koin.androidContext
@@ -17,6 +18,7 @@ class DDDApp : Application(), KoinStartup {
         modules(
             databaseModule,
             viewModelsModule,
+            prefsModule,
         )
     }
 }
