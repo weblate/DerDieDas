@@ -380,4 +380,6 @@
     <string name="Bank">בנק/ספסל</string>
     <string name="Raum">מרחב/חדר</string>
     <string name="Situation">סיטואציה</string>
+    <string name="Ehrgeiz">שאיפה</string>
+    <string name="Gefährdung">סיכון/איום</string>
 </resources>
