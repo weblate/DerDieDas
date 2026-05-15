@@ -676,4 +676,16 @@
     <string name="mastered_all_nouns_FORMAT">🎉 Said ilusti hakkama %1$d nimisõnaga!</string>
     <string name="restart_session">Alusta uut õppesessiooni</string>
     <string name="review_mastered_nouns">Vaata õpitud nimisõnad üle</string>
+    <string name="Spektrum">Spekter</string>
+    <string name="Bildschirm">Ekraan</string>
+    <string name="Publikation">Väljaanne</string>
+    <string name="Privatisierung">Erastamine</string>
+    <string name="Erneuerung">Uuendamine</string>
+    <string name="Schulleiter">Koolidirektor</string>
+    <string name="Versprechen">Lubadus</string>
+    <string name="Trauer">Lein</string>
+    <string name="Einzelfall">Erijuhtum</string>
+    <string name="Rätsel">Mõistatus</string>
+    <string name="Einsicht">Ülevaade</string>
+    <string name="Attentat">Atentaat</string>
 </resources>
