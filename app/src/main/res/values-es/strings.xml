@@ -1327,4 +1327,26 @@
     <string name="Kapelle">Capilla</string>
     <string name="Symbol">Símbolo</string>
     <string name="Wiese">Pradera</string>
+    <string name="dialog_back">Atrás</string>
+    <string name="dialog_exit">Salir</string>
+    <string name="mastered_all_nouns_FORMAT">🎉 ¡Dominaste todos los %1$d nombres!</string>
+    <string name="restart_session">Iniciar Sesión Nueva</string>
+    <string name="review_mastered_nouns">Revisar Nombres Dominados</string>
+    <string name="Geschwindigkeit">Velocidad</string>
+    <string name="Existenz">Existencia</string>
+    <string name="Baby">Bebé</string>
+    <string name="Pass">Pasaporte</string>
+    <string name="Leiterin">Director</string>
+    <string name="Gitarre">Guitarra</string>
+    <string name="Bewerber">Aplicante</string>
+    <string name="Bestandteil">Componente</string>
+    <string name="Eigentümer">Propietario</string>
+    <string name="Palästinenser">Palestino</string>
+    <string name="Geschehen">Evento</string>
+    <string name="Trio">Trío</string>
+    <string name="Trennung">Separación</string>
+    <string name="Respekt">Respeto</string>
+    <string name="Betreiber">Operador</string>
+    <string name="Präsentation">Presentación</string>
+    <string name="Italiener">Italiano</string>
 </resources>
