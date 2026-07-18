@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="full_words_title">已学会</string>
+    <string name="help">帮助</string>
+    <string name="theme_light">亮色</string>
+    <string name="theme_system">系统主题</string>
+    <string name="prefs_language">语言</string>
+    <string name="theme_dark">深色</string>
+    <string name="dialog_yes">是</string>
+    <string name="dialog_no">否</string>
 </resources>
